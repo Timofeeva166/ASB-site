@@ -1,0 +1,39 @@
+.list {
+  list-style-type: none;
+}
+
+.list-item {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: rgb(255, 255, 255, 0.5);
+}
+
+.list-item__container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.list-item__container-title {
+  border-radius: 5px;
+  padding: 5px;
+  color: #fff;
+  background-color: #d8c06f;
+  inline-size: fit-content;
+}
+
+.list-item__text {
+  font-size: 18px;
+}
+
+.template-text {
+  color: #c09d2e;
+}
+
+.clothes-img {
+  align-self: center;
+  inline-size: clamp(200px, 70vi, 700px);
+}
