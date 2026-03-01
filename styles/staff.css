@@ -1,0 +1,125 @@
+.checkbox {
+  display: none;
+}
+
+.departament__head {
+  display: grid;
+  grid-template-columns: 1fr 24px;
+  align-items: center;
+  border: 1px solid #333;
+  border-radius: 5px;
+  padding: 20px 40px;
+  font-size: 25px;
+  text-transform: uppercase;
+  background-color: rgb(255, 255, 255, 0.5);
+  transform: border 0.4s ease;
+  cursor: pointer;
+  gap: 10px;
+}
+
+.checkbox:checked ~ .departament__head {
+  border-radius: 5px 5px 0px 0px;
+  border-block-end: none;
+}
+
+.arrow-department {
+  transition: transform 0.4s ease;
+}
+
+.checkbox:checked ~ .departament__head .arrow-department {
+  transform: rotate(180deg);
+}
+
+.departament__body {
+  opacity: 0;
+  transform: scaleY(0);
+  transform-origin: top;
+  block-size: 0;
+}
+
+.checkbox:checked ~ .departament__body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 0px 0px 5px 5px;
+  border-inline-start: 1px solid #333;
+  border-inline-end: 1px solid #333;
+  border-block-end: 1px solid #333;
+  padding: 20px 40px;
+  opacity: 1;
+  background-color: rgb(255, 255, 255, 0.5);
+  transition: transform 0.4s ease;
+  transform: scaleY(1);
+  block-size: auto;
+}
+
+
+.departament__body-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.departament__body-containe-title {
+  border-radius: 5px;
+  padding: 5px;
+  color: #fff;
+  font-size: 20px;
+  background-color: #c09d2e;
+  inline-size: fit-content;
+}
+
+.departament__body-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.departament__body-card-list-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.sub-departament__container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sub-departament__title {
+  border-radius: 5px;
+  padding: 5px;
+  color: #fff;
+  font-size: 18px;
+  background-color: #d8c06f;
+  inline-size: fit-content;
+}
+
+.name {
+  margin-block-end: 5px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+@media (width < 768px) {
+  .departament__head {
+    font-size: 20px;
+  }
+
+  .departament__body-containe-title {
+    font-size: 18px;
+  }
+
+  .sub-departament__title {
+    font-size: 16px;
+  }
+
+  .name {
+    font-size: 16px;
+  }
+
+  .departament__body-card-list-item {
+    font-size: 14px;
+  }
+}
