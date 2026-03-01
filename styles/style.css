@@ -427,6 +427,8 @@
   }
 
   .resume__img {
+    block-size: 150px;
+    inline-size: 150px;
     grid-row: 1;
     grid-column: 1;
   }
@@ -434,6 +436,7 @@
   .resume__data-container {
     grid-row: 1;
     grid-column: 2;
+    gap: 5px;
   }
 
   .resume__title {
