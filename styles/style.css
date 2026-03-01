@@ -276,6 +276,10 @@
   opacity: 1;
 }
 
+body:has(.resume[open]) {
+  overflow: hidden;
+}
+
 .resume::backdrop {
   background-color: rgba(0, 0, 0, 0.5);
 }
