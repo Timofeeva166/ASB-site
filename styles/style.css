@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
+  padding: 25px;
   opacity: 0;
   color: #333;
   font-family: 'Jost', sans-serif;
@@ -19,7 +20,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 20px;
   border-radius: 5px;
   border-block-start: 2px solid #333;
   padding: 20px 60px;
@@ -190,7 +190,6 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
-  margin-block-end: 20px;
   border-radius: 5px;
   border-block-end: 2px solid #333;
   padding: 20px 60px;
@@ -343,20 +342,6 @@
 
 .close-icon:hover {
   color: #c09d2e;
-}
-
-@media (width < 1440px) {
-  .content {
-    padding: 25px;
-  }
-
-  .header {
-    margin: 0px;
-  }
-
-  .footer {
-    margin: 0px;
-  }
 }
 
 @media (width < 1240px) {
