@@ -324,7 +324,6 @@
   color: #333;
   transition: opacity 0.4s ease, visibility 0.4s ease;
   inline-size: clamp(600px, 60vi, 1000px);
-  block-size: 97vh;
 }
 
 .resume[open] {
@@ -428,6 +427,10 @@ body:has(.resume[open]) {
 @media (width < 1024px) {
   .dollar {
     display: none;
+  }
+
+  .resume {
+     block-size: 97vh;
   }
 }
 
