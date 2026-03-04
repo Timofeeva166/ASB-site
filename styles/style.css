@@ -430,7 +430,7 @@ body:has(.resume[open]) {
   }
 
   .resume {
-     block-size: 97vh;
+    block-size: 97dvh;
   }
 }
 
