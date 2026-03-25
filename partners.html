@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./styles/partners.css" />
     <link rel="stylesheet" href="./styles/animations.css" />
     <link rel="icon" href="./images/logo.ico" sizes="any">
+    <script type="module" src="./scripts/partners.js" defer></script>
   </head>
   <body class="content">
     <header class="header">
@@ -22,21 +23,28 @@
         </h2>
       </div> 
       <nav class="header__navigation">
-        <ul class="header__navigation-list">
+        <ul class="header__navigation-list-others">
           <li class="header__navigation-list-item">
-            <a class="header__navigation-list-link link-accent" href="https://vk.com/askbank" target="_blank">
-              Аск
+            <a class="header__navigation-list-link icon-sections" href="index.html">
+              <svg class="sidebar-icon" width="35" height="35" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 10L12 3L21 10L21 20H15V14H9V20H3V10Z" 
+                  stroke="currentColor" 
+                  stroke-width="1.5" 
+                  stroke-linecap="round" 
+                  stroke-linejoin="round"/>
+              </svg>
+              <span class="sidebar-icon-text">главная</span>
             </a>
           </li>
           <li class="header__navigation-list-item">
-            <a class="header__navigation-list-link link-accent" href="https://vk.com/sofijaten" target="_blank">
-              Директор банка
-            </a>
-          </li>
-          <li class="header__navigation-list-item">
-            <a class="header__navigation-list-link link-accent" href="https://vk.com/zrzf_649" target="_blank">
-              Директор IT-департамента
-            </a>
+            <div class="icon-sections">
+              <svg class="icon-else sidebar-icon" width="35" height="35" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 6H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M4 12H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M4 18H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+              <span class="sidebar-icon-text">еще</span>
+            </div>
           </li>
         </ul>
       </nav>
@@ -92,3 +100,18 @@
       </svg>
     </a>
   </body>
+    <template id="template__navigation-icons">
+      <div class="navigation-icons__container">
+        <ul class="navigation-icons__list">
+          <li class="navigation-icons__list-item">
+          </li>
+          <li class="navigation-icons__list-item">
+          </li>
+          <li class="navigation-icons__list-item">
+          </li>
+          <li class="navigation-icons__list-item">
+          </li>
+        </ul>
+      </div>
+    </template>
+</html>
