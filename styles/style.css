@@ -316,6 +316,7 @@
   border-radius: 50%;
   background-color: #c09d2e;
   transition: transform 0.4s ease;
+  z-index: 10;
 }
 
 .chat:hover {
