@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ASB Official Site</title>
     <link rel="stylesheet" href="./fonts/fonts.css" />
-    <link rel="stylesheet" href="./styles/variables.css" />
+    <link rel="stylesheet" href="./styles/dark-theme.css" />
+    <link rel="stylesheet" href="./styles/light-theme.css" />
     <link rel="stylesheet" href="./styles/globals.css" />
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/animations.css" />
     <link rel="icon" href="./images/logo.ico" sizes="any">
+    <script type="module" src="./scripts/index.js" defer></script>
   </head>
   <body class="content">
     <header class="header">
@@ -41,6 +43,20 @@
         </ul>
       </nav>
     </header>
+    <div class="theme">
+      <ul class="theme-list">
+        <li class="theme-list-item">
+          <button class="theme-button">
+            светлая
+          </button>
+        </li>
+        <li class="theme-list-item">
+          <button class="theme-button">
+            темная
+          </button>
+        </li>
+      </ul>
+    </div>
     <main class="main">
       <h1 class="title">Добро пожаловать на официальный сайт ASB Bank!</h1>
       <aside class="sidebar">
@@ -734,27 +750,4 @@
       </div>
     </dialog>
   </body>
-  <script>
-    const cards = document.querySelectorAll('.staff__card-list-item');
-    const closeButtons = document.querySelectorAll('.close-icon');
-
-    cards.forEach(card => {
-    card.addEventListener('click', function() {
-      const modalId = this.dataset.modal;
-      const modal = document.getElementById(modalId);
-      if (modal) {
-        modal.showModal();
-      }
-    });
-  });
-
-  closeButtons.forEach(btn => {
-    btn.addEventListener('click', function() {
-      const modal = this.closest('dialog');
-      if (modal) {
-        modal.close();
-      }
-    });
-  });
-  </script>
 </html>

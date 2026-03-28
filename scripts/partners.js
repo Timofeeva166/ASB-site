@@ -1,4 +1,7 @@
-import { onClick, iconElse } from "./index.js";
+/** СКРИПТЫ ДЛЯ СТРАНИЦЫ ПАРТНЕРОВ **/
+
+import { onClick, iconElse } from "./popover.js";
+import { loadThemeWithoutButtons } from "./theme.js";
 
 export const partnersArr = [
   {
@@ -23,4 +26,5 @@ export const partnersArr = [
   }
 ];
 
+loadThemeWithoutButtons();
 iconElse?.addEventListener('click', (e) => onClick(e, partnersArr));

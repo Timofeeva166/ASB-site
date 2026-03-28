@@ -1,0 +1,22 @@
+:root.light-theme {
+  --header-gradient:
+  linear-gradient(
+    to top,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0) 50%
+  );
+  --background-image: url(../images/background.png);
+  --main-background-color: #fbf0ca;
+  --block-background-color: rgb(255, 255, 255, 0.5);
+  --staff-card-color: rgb(255, 255, 255, 0.8);
+  --text-color: #333;
+  --button-color: #c09d2e;
+  --dollar-color: #f8eabc;
+  --accent-color: #ccb56a;
+  --card-backgroud-color: #fff;
+  --title-color: #fff;
+  --popover-menu-background-color: #fff2d8;
+  --modal-background-color: #fff;
+  --button-theme-hover-color: rgba(243, 231, 166, 0.8);
+  --subsection-title-bacground-color: #d8c06f;
+}

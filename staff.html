@@ -4,12 +4,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <title>Штат</title>
     <link rel="stylesheet" href="./styles/globals.css" />
+    <link rel="stylesheet" href="./styles/dark-theme.css" />
+    <link rel="stylesheet" href="./styles/light-theme.css" />
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/pages-base.css" />
     <link rel="stylesheet" href="./styles/staff.css" />
     <link rel="stylesheet" href="./styles/animations.css" />
     <link rel="icon" href="./images/logo.ico" sizes="any">
     <script type="module" src="./scripts/staff.js" defer></script>
+    <script type="module" src="./scripts/theme.js" defer></script>
   </head>
   <body class="content">
     <header class="header">
@@ -466,23 +469,4 @@
       </div>
     </template>
   </body>
-  <script>
-    function toggleCheckboxClass(event) {
-      const checkbox = event.target;
-        if (checkbox.checked) {
-          checkbox.classList.add('checked');
-        } else {
-          checkbox.classList.remove('checked');
-      }
-    }
-
-    const checkboxes = document.querySelectorAll('.checkbox');
-
-    checkboxes.forEach(checkbox => {
-      checkbox.addEventListener('change', toggleCheckboxClass);
-        if (checkbox.checked) {
-          checkbox.classList.add('checked');
-        }
-    });
-  </script>
 </html>

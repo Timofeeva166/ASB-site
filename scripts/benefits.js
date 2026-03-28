@@ -1,4 +1,7 @@
-import { onClick, iconElse } from "./index.js";
+/** СКРИПТЫ ДЛЯ СТРАНИЦЫ ПРЕМИУМ УСЛУГ **/
+
+import { onClick, iconElse } from "./popover.js";
+import { loadThemeWithoutButtons } from "./theme.js";
 
 const benefitsArr = [
   {
@@ -23,4 +26,5 @@ const benefitsArr = [
   }
 ];
 
+loadThemeWithoutButtons();
 iconElse?.addEventListener('click', (e) => onClick(e, benefitsArr));

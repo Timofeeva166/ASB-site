@@ -7,13 +7,13 @@
   display: flex;
   flex-direction: column;
   gap: 40px;
-  border-block-end: 2px solid #333;
+  border-block-end: 2px solid var(--text-color);
   padding: 60px;
 }
 
 .title {
   margin: 0;
-  color: #4a4a4a;
+  color: var(--text-color);
   font-size: 55px;
   text-align: left;
   text-transform: uppercase;
@@ -23,7 +23,7 @@
   display: flex;
   flex-direction: column;
   gap: 25px;
-  color: #4a4a4a;
+  color: var(--text-color);
   font-size: 20px;
   line-height: 150%;
   list-style-type: circle;
@@ -32,10 +32,10 @@
 .list-item__title {
   border-radius: 5px;
   padding: 5px;
-  color: #fff;
+  color: var(--title-color);
   font-weight: 400;
   font-size: 30px;
-  background-color: #c09d2e;
+  background-color: var(--button-color);
   inline-size: fit-content;
 }
 
@@ -47,7 +47,7 @@
 }
 
 .arrow:hover {
-  color: #c09d2e;
+  color: var(--button-color);
 }
 
 @media (width < 900px) {

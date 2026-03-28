@@ -6,12 +6,12 @@
   display: grid;
   grid-template-columns: 1fr 24px;
   align-items: center;
-  border: 1px solid #333;
+  border: 1px solid var(--text-color);
   border-radius: 5px;
   padding: 20px 40px;
   font-size: 25px;
   text-transform: uppercase;
-  background-color: rgb(255, 255, 255, 0.5);
+  background-color: var(--block-background-color);
   transform: border 0.4s ease;
   cursor: pointer;
   gap: 10px;
@@ -42,12 +42,12 @@
   flex-direction: column;
   gap: 20px;
   border-radius: 0px 0px 5px 5px;
-  border-inline-start: 1px solid #333;
-  border-inline-end: 1px solid #333;
-  border-block-end: 1px solid #333;
+  border-inline-start: 1px solid var(--text-color);
+  border-inline-end: 1px solid var(--text-color);
+  border-block-end: 1px solid var(--text-color);
   padding: 20px 40px;
   opacity: 1;
-  background-color: rgb(255, 255, 255, 0.5);
+  background-color: var(--block-background-color);
   transition: transform 0.4s ease;
   transform: scaleY(1);
   block-size: auto;
@@ -63,9 +63,9 @@
 .departament__body-containe-title {
   border-radius: 5px;
   padding: 5px;
-  color: #fff;
+  color: var(--title-color);
   font-size: 20px;
-  background-color: #c09d2e;
+  background-color: var(--button-color);
   inline-size: fit-content;
 }
 
@@ -90,9 +90,9 @@
 .sub-departament__title {
   border-radius: 5px;
   padding: 5px;
-  color: #fff;
+  color: var(--title-color);
   font-size: 18px;
-  background-color: #d8c06f;
+  background-color: var(--subsection-title-bacground-color);
   inline-size: fit-content;
 }
 

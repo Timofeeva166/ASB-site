@@ -1,4 +1,7 @@
-import { onClick, iconElse } from "./index.js";
+/** СКРИПТЫ ДЛЯ СТРАНИЦЫ ПРАВИЛ **/
+
+import { onClick, iconElse } from "./popover.js";
+import { loadThemeWithoutButtons } from "./theme.js";
 
 export const rulesArr = [
   {
@@ -23,4 +26,5 @@ export const rulesArr = [
   }
 ];
 
+loadThemeWithoutButtons();
 iconElse?.addEventListener('click', (e) => onClick(e, rulesArr));
