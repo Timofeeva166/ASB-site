@@ -308,6 +308,12 @@
   gap: 30px;
 }
 
+.footer__partners-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .footer__partners-title {
   font-size: 15px;
   text-transform: uppercase;
