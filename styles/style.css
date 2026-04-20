@@ -113,7 +113,7 @@
 .main {
   display: grid;
   grid-template-columns: min-content 1fr;
-  grid-template-rows: min-content min-content 1fr;
+  grid-template-rows: min-content min-content min-content 1fr;
   gap: 20px;
   border-radius: 5px;
   padding: 20px 60px;
@@ -129,7 +129,7 @@
 
 .sidebar {
   grid-column: 1;
-  grid-row: 2 / 4;
+  grid-row: 2 / 5;
   border-radius: 5px;
   padding: 20px 10px;
   background-color: var(--block-background-color);
@@ -187,10 +187,18 @@
   background-color: var(--block-background-color);
 }
 
+.anonce {
+  grid-row: 3;
+}
+
 .hero__title {
   z-index: 2;
   font-size: clamp(3.125rem, 2.4648rem + 2.8169vw, 5rem);
   line-height: 100%;
+}
+
+.anonce .hero__title {
+  font-size: clamp(1.875rem, 1.2148rem + 2.8169vw, 3.75rem);
 }
 
 .hero__quote {
@@ -233,7 +241,7 @@
   display: flex;
   flex-direction: column;
   grid-column: 2;
-  grid-row: 3;
+  grid-row: 4;
   gap: 20px;
   border-radius: 5px;
   padding: 20px;
@@ -248,6 +256,10 @@
   text-transform: uppercase;
   background-color: var(--button-color);
   inline-size: fit-content;
+}
+
+.anonce .section__title {
+  align-self: start;
 }
 
 .staff__card-list {
