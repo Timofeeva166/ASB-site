@@ -5,7 +5,7 @@ export const buttons = document.querySelectorAll(".theme-button");
 export const html = document.querySelector('html');
 export const themes = {
   'light-theme': 'светлая',
-  'auto-theme': 'авто',
+  'pink-theme': 'розовая',
   'dark-theme': 'темная',
 };
 

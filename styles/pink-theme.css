@@ -1,0 +1,22 @@
+:root.pink-theme {
+  --header-gradient:
+  linear-gradient(
+    to top,
+    rgba(240, 240, 224, 0.5) 0%,
+    rgba(240, 240, 224, 0) 50%
+  );
+  --background-image: url(../images/pink-background.png);
+  --main-background-color: #f8adb9;
+  --block-background-color: rgb(255, 255, 255, 0.5);
+  --staff-card-color: #fcf0e0;
+  --text-color: #333;
+  --button-color: #c1527a;
+  --dollar-color: #fbadba;
+  --accent-color: #eb81a7;
+  --card-backgroud-color: #fcf0e0;
+  --title-color: #fff;
+  --popover-menu-background-color: #fff2d8;
+  --modal-background-color: #fff;
+  --button-theme-hover-color: #eb81a7;
+  --subsection-title-bacground-color: #d8c06f;
+}
