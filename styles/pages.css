@@ -1,0 +1,40 @@
+.main {
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  color: var(--text-color);
+  border-block-end: 2px solid var(--text-color);
+}
+
+.anonce-container {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+  text-align: center;
+  margin: clamp(4.375rem, 1.5141rem + 12.2066vw, 12.5rem);;
+  padding: clamp(2.1875rem, 1.4173rem + 3.2864vw, 4.375rem);
+  border: 5px dotted var(--text-color);
+  border-radius: 50px;
+  gap: 20px;
+}
+
+.title {
+  font-size: clamp(2.1875rem, 1.4173rem + 3.2864vw, 4.375rem);
+}
+
+.anonce-text {
+  text-align: center;
+  font-size: clamp(0.9375rem, 0.8275rem + 0.4695vw, 1.25rem);
+}
+
+.arrow {
+  display: block;
+  transition: color 0.4s ease;
+  block-size: 50px;
+  inline-size: 50px;
+}
+
+.arrow:hover {
+  color: var(--button-color);
+}

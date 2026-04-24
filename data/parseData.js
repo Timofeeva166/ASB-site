@@ -1,1 +1,0 @@
-import { resumes } from "./resume";

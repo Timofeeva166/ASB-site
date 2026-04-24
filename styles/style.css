@@ -128,12 +128,29 @@
 }
 
 .sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
   grid-column: 1;
-  grid-row: 2 / 5;
+  grid-row: 2 / 4;
   border-radius: 5px;
   padding: 20px 10px;
   background-color: var(--block-background-color);
   inline-size: 100px;
+}
+
+.soon {
+  align-self: end;
+}
+
+.label-coming-soon {
+  border-radius: 5px;
+  padding: 5px;
+  color: var(--title-color);
+  font-size: 10px;
+  text-transform: uppercase;
+  background-color: var(--button-color);
+  inline-size: fit-content;
 }
 
 .sidebar__list {
@@ -141,7 +158,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  gap: 30px;
+  gap: 20px;
 }
 
 .sidebar__list-link {
@@ -150,7 +167,7 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  gap: 5px;
+  gap: 8px;
 }
 
 .sidebar-icon {
@@ -172,6 +189,17 @@
 .sidebar__list-link:hover .sidebar-icon-text {
   color: var(--button-color);
   text-decoration: underline;
+}
+
+.sidebar__divider {
+  background-color: var(--text-color);
+  display: block;
+  block-size: 1px;
+  inline-size: 90%;
+  border-radius: 50%;
+  margin-block-start: 20px;
+  margin-block-end: 20px;
+  align-self: center;
 }
 
 .hero {
@@ -241,7 +269,7 @@
   display: flex;
   flex-direction: column;
   grid-column: 2;
-  grid-row: 4;
+  grid-row: 3;
   gap: 20px;
   border-radius: 5px;
   padding: 20px;
@@ -473,7 +501,7 @@ body:has(.resume[open]) {
   display: none;
   position: absolute;
   background-color: var(--popover-menu-background-color);
-  border-radius: 5px;
+  border-radius: 20px;
   z-index: 1000;
   border: 1px solid var(--text-color);
   display: flex;
@@ -555,6 +583,7 @@ body:has(.resume[open]) {
 
   .sidebar {
     inline-size: 100%;
+    padding: 20px;
   }
 
   .sidebar__list {
