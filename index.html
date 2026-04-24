@@ -71,7 +71,7 @@
               very soon
             </p>
           </div>
-        <ul class="sidebar__list">
+        <ul class="sidebar__list new">
           <li class="sidebar__list-item">
             <a class="sidebar__list-link" href="posts.html">
               <svg class="sidebar-icon" width="35" height="35" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -88,14 +88,24 @@
                 <use href="./svg/icons.svg#pages"></use>
               </svg>
               <p class="sidebar-icon-text">
-                профили сотрудников
+                блог
               </p>
             </a>
           </li>
         </ul>
-          <div class="sidebar__divider"></div>
-        <ul class="sidebar__list">
-          <li class="sidebar__list-item">
+        <div class="sidebar__divider"></div>
+        <ul class="sidebar__list others">
+          <li class="sidebar__list-item hide-desktop">
+            <div class="sidebar__list-link">
+              <svg class="sidebar-icon icon-else" width="35" height="35" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <use href="./svg/icons.svg#else"></use>
+              </svg>
+              <p class="sidebar-icon-text">
+                меню
+              </p>
+            </div>
+          </li>
+          <li class="sidebar__list-item hide-mobile">
             <a class="sidebar__list-link" href="rules.html">
               <svg class="sidebar-icon" width="35" height="35" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <use href="./svg/icons.svg#rules"></use>
@@ -105,7 +115,7 @@
               </p>
             </a>
           </li>
-          <li class="sidebar__list-item">
+          <li class="sidebar__list-item hide-mobile">
             <a class="sidebar__list-link" href="./files/resume.docx">
               <svg class="sidebar-icon" width="35" height="35" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <use href="./svg/icons.svg#template"></use>
@@ -115,7 +125,7 @@
               </p>
             </a>
           </li>
-          <li class="sidebar__list-item">
+          <li class="sidebar__list-item hide-mobile">
             <a class="sidebar__list-link" href="staff.html">
               <svg class="sidebar-icon" width="35" height="35" viewBox="0 0 24 24" fill="none">
                 <use href="./svg/icons.svg#staff"></use>
@@ -125,7 +135,7 @@
               </p>
             </a>
           </li>
-          <li class="sidebar__list-item">
+          <li class="sidebar__list-item hide-mobile">
             <a class="sidebar__list-link" href="partners.html">
               <svg class="sidebar-icon" width="35" height="35" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <use href="./svg/icons.svg#partners"></use>
@@ -135,7 +145,7 @@
               </p>
             </a>
           </li>
-          <li class="sidebar__list-item">
+          <li class="sidebar__list-item hide-mobile">
             <a class="sidebar__list-link" href="benefits.html">
               <svg class="sidebar-icon" width="35" height="35" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <use href="./svg/icons.svg#benefits"></use>
@@ -870,4 +880,20 @@
       </div>
     </dialog>
   </body>
+  <template id="template__navigation-icons">
+      <div class="navigation-icons__container">
+        <ul class="navigation-icons__list">
+          <li class="navigation-icons__list-item">
+          </li>
+          <li class="navigation-icons__list-item">
+          </li>
+          <li class="navigation-icons__list-item">
+          </li>
+          <li class="navigation-icons__list-item">
+          </li>
+          <li class="navigation-icons__list-item">
+          </li>
+        </ul>
+      </div>
+    </template>
 </html>
