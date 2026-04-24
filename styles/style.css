@@ -569,6 +569,11 @@ body:has(.resume[open]) {
 }
 
 @media (width < 768px) {
+  .content {
+    gap: 10px;
+    padding: 15px;
+  }
+
   .header {
     padding: 20px;
   }
@@ -590,6 +595,7 @@ body:has(.resume[open]) {
 
   .title {
     text-align: center;
+    margin-block-start: 8px;
   }
 
   .sidebar {

@@ -1,0 +1,6 @@
+@media (width < 768px) {
+  .navigation-icons__list {
+    grid-template-columns: repeat(3, 70px);
+    gap: 8px;
+  }
+}
