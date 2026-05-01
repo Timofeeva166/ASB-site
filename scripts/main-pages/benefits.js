@@ -1,7 +1,7 @@
 /** СКРИПТЫ ДЛЯ СТРАНИЦЫ ПРЕМИУМ УСЛУГ **/
 
-import { onClick, iconElse } from "./popover.js";
-import { loadThemeWithoutButtons } from "./theme.js";
+import { onClick, iconElse } from "../popover.js";
+import { loadThemeWithoutButtons } from "../theme.js";
 
 const benefitsArr = [
   {

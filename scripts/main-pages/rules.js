@@ -1,7 +1,7 @@
 /** СКРИПТЫ ДЛЯ СТРАНИЦЫ ПРАВИЛ **/
 
-import { onClick, iconElse } from "./popover.js";
-import { loadThemeWithoutButtons } from "./theme.js";
+import { onClick, iconElse } from "../popover.js";
+import { loadThemeWithoutButtons } from "../theme.js";
 
 export const rulesArr = [
   {
