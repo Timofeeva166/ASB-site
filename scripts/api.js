@@ -1,14 +1,12 @@
-// ПОЛУЧИТЬ ДАННЫЕ ИЗ ФАЙЛА
+// ПОЛУЧИТЬ ДАННЫЕ ПО АДРЕСУ
 
-async function fetchCardsData() {
-  const response = await fetch("/public/data.json");
+export async function fetchData(adress) {
+  const response = await fetch(adress);
 
   if (!response.ok) {
-    throw new Error('Ошибка загрузки информации о карточках');
+    throw new Error('Ошибка загрузки информации');
   }
 
   const result = await response.json();
   return result;
 }
-
-fetchCardsData();
