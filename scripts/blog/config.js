@@ -1,5 +1,5 @@
 export const urls = {
-  allPages: '/public/all-pages.json'
+  allPages: '/ASB-site/public/all-pages.json'
 }
 
 export const classes = {
