@@ -1,0 +1,28 @@
+.main {
+  display: flex;
+  justify-content: center;
+  padding: 20px 30px;
+  position: relative;
+}
+
+.title {
+  margin: 0;
+}
+
+.staff__card-list-item {
+  inline-size: 100%;
+}
+
+.loader {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  block-size: 100%;
+  inline-size: 100%;
+  background-color: var(--main-background-color);
+  font-size: 30px;
+  border-radius: 5px;
+}
