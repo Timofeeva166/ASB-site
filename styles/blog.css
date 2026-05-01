@@ -26,3 +26,22 @@
   font-size: 30px;
   border-radius: 5px;
 }
+
+.error-state {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.btn {
+  justify-self: end;
+  border: none;
+  border-radius: 5px;
+  padding: 4px 15px;
+  color: var(--title-color);
+  background-color: var(--button-color);
+  cursor: pointer;
+  inline-size: fit-content;
+}

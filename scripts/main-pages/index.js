@@ -1,6 +1,6 @@
 /** СКРИПТЫ ДЛЯ ГЛАВНОЙ СТРАНИЦЫ **/
-import { onClick, iconElse } from "./popover.js";
-import { loadTheme, toggleTheme, themeContainer } from "./theme.js";
+import { onClick, iconElse } from "../popover.js";
+import { loadTheme, toggleTheme, themeContainer } from "../theme.js";
 
 const indexArr = [
   {
