@@ -6,6 +6,7 @@ export const html = document.querySelector('html');
 export const themes = {
   'light-theme': 'светлая',
   'pink-theme': 'розовая',
+  'may-theme': 'майская',
   'dark-theme': 'темная',
 };
 

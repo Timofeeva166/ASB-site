@@ -1,0 +1,22 @@
+:root.may-theme {
+  --header-gradient: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(255, 69, 0, 0.2) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  --background-image: url(../images/may-background.png);
+  --main-background-color: #0a0a0a;
+  --block-background-color: rgba(30, 15, 8, 0.85);
+  --staff-card-color: #601b02;
+  --text-color: #E8DCC8;
+  --button-color: #dc3d03;
+  --dollar-color: #3d1a0a;
+  --accent-color: #D2691E;
+  --card-background-color: #1a0a05;
+  --title-color: #FFD699;
+  --popover-menu-background-color: #0d0d0d;
+  --modal-background-color: #1a120e;
+  --button-theme-hover-color: rgba(255, 69, 0, 0.7);
+  --subsection-title-background-color: #CC5500;
+}

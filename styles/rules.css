@@ -21,7 +21,7 @@
   border-radius: 5px;
   padding: 5px;
   color: var(--title-color);
-  background-color: var(--subsection-title-bacground-color);
+  background-color: var(--subsection-title-background-color);
   inline-size: fit-content;
 }
 
