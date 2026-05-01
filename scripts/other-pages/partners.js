@@ -3,7 +3,7 @@
 import { onClick, iconElse } from "./popover.js";
 import { loadThemeWithoutButtons } from "./theme.js";
 
-export const partnersArr = [
+const partnersArr = [
   {
     iconName: 'rules',
     iconText: 'правила',

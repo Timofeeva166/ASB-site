@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Блог</title>
+    <link rel="stylesheet" href="./fonts/fonts.css" />
+    <link rel="stylesheet" href="./styles/dark-theme.css" />
+    <link rel="stylesheet" href="./styles/pink-theme.css" />
+    <link rel="stylesheet" href="./styles/light-theme.css" />
+    <link rel="stylesheet" href="./styles/globals.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/posts.css" />
+    <link rel="stylesheet" href="./styles/blog.css" />
+    <link rel="stylesheet" href="./styles/animations.css" />
+    <link rel="icon" href="./images/logo.ico" sizes="any">
+    <script type="module" src="./scripts/blog/blog.js" defer></script>
+  </head>
+  <body class="content">
+    <header class="header">
+      <div class="header__logo-container">
+        <a class="header__logo-link" href="https://vk.com/askbank" target="_blank">
+          <img src="./images/logo1.jpg" class="logo-img">
+        </a>
+        <h2 class="header__title">
+          Aurum Sanctum Bank OC & Fandom
+        </h2>
+      </div> 
+      <nav class="header__navigation">
+        <ul class="header__navigation-list-others">
+          <li class="header__navigation-list-item">
+            <a class="header__navigation-list-link icon-sections" href="index.html">
+              <svg class="sidebar-icon" width="35" height="35" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 10L12 3L21 10L21 20H15V14H9V20H3V10Z" 
+                  stroke="currentColor" 
+                  stroke-width="1.5" 
+                  stroke-linecap="round" 
+                  stroke-linejoin="round"/>
+              </svg>
+              <span class="sidebar-icon-text">главная</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <section class="staff">
+        <h2 class="title">
+          Выберите персонажа
+        </h2>
+        <ul class="staff__card-list">
+        </ul>
+      </section>
+      <div class="loader">
+        <p class="loader__text">
+          Загрузка...
+        </p>
+      </div>
+    </main>
+    <a class="arrow" href="index.html">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" height="50" width="50" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m11 5-7 7 7 7M4 12h16"/>
+      </svg>
+    </a>
+    <a class="chat" href="https://vk.me/askbank" target="_blank">
+      <svg width="35" height="35" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 4H4C2.9 4 2 4.9 2 6V16C2 17.1 2.9 18 4 18H8L12 22L16 18H20C21.1 18 22 17.1 22 16V6C22 4.9 21.1 4 20 4Z" 
+          stroke="#fff" 
+          stroke-width="1.5" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
+        <path d="M8 10H16" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M8 14H12" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+    </a>
+
+    <!-- ШАБЛОН КАРТОЧКИ -->
+    <template id="template__staff-card">
+      <li class="staff__card-list-item">
+        <article class="staff__card">
+          <img class="card-img">
+          <p class="card-text"></p>
+        </article>
+      </li>
+    </template>
+  </body>
+</html>

@@ -3,7 +3,7 @@
 import { onClick, iconElse } from "./popover.js";
 import { loadThemeWithoutButtons } from "./theme.js";
 
-export const rulesArr = [
+const rulesArr = [
   {
     iconName: 'template',
     iconText: 'шаблон резюме',

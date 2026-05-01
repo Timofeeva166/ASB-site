@@ -1,0 +1,32 @@
+{
+  "success": true,
+  "data" : {
+    "all-pages" : [
+      {
+        "id": "aros",
+        "name": "Арос Свифт",
+        "img": "./images/aros.png"
+      },
+      {
+        "id": "kairen",
+        "name": "Кайрен Фортин",
+        "img": "./images/kai.png"
+      },
+      {
+        "id": "aros",
+        "name": "Арос Свифт",
+        "img": "./images/aros.png"
+      },
+      {
+        "id": "kairen",
+        "name": "Кайрен Фортин",
+        "img": "./images/kai.png"
+      },
+      {
+        "id": "kairen",
+        "name": "Кайрен Фортин",
+        "img": "./images/kai.png"
+      }
+    ]
+  }
+}

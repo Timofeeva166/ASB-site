@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./styles/light-theme.css" />
     <link rel="stylesheet" href="./styles/globals.css" />
     <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="stylesheet" href="./styles/pages.css" />
+    <link rel="stylesheet" href="./styles/posts.css" />
     <link rel="stylesheet" href="./styles/animations.css" />
     <link rel="icon" href="./images/logo.ico" sizes="any">
     <script type="module" src="./scripts/pages.js" defer></script>
@@ -43,14 +43,268 @@
       </nav>
     </header>
     <main class="main">
-      <div class="anonce-container">
-        <h1 class="title">
-          Профили сотрудников
-        </h1>
-        <p class="anonce-text">
-          Скоро здесь можно будет посмотреть дополнительный контент по вашим любимым персонажам - арты, истории, скетчи, фанфики и многое другое! Следите за новостями!
-        </p>
-      </div>
+      <section class="left-side">
+        <div class="avatar-container">
+          <img class="avatar-img" src="./images/loren.png">
+        </div>
+        <div class="about-me-container own-profile-container">
+          <h2 class="about-me__title">
+            Обо мне
+          </h2>
+          <div class="divider"></div>
+          <div class="about-me__body">
+            <ul class="about-me__list">
+              <li class="about-me__list-item">
+                Первый пункт
+              </li>
+              <li class="about-me__list-item">
+                Второй пункт
+              </li>
+              <li class="about-me__list-item">
+                Третий пункт
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="friends-container own-profile-container">
+          <h2 class="friends-container__title">
+            Друзья
+          </h2>
+          <div class="divider"></div>
+          <div class="friends__body">
+            <ul class="friends__list">
+              <li class="friends__list-item">
+                <a class="friends__list-link">
+                  <img class="link-img" src="./images/kai.png">
+                </a>
+              </li>
+              <li class="friends__list-item">
+                <a class="friends__list-link">
+                  <img class="link-img" src="./images/elen.png">
+                </a>
+              </li>
+              <li class="friends__list-item">
+                <a class="friends__list-link">
+                  <img class="link-img" src="./images/aros.png">
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="interests-container own-profile-container">
+          <h2 class="interests-container__title">
+            Интересы
+          </h2>
+          <div class="divider"></div>
+          <div class="interests__body">
+            <ul class="interests__list">
+              <li class="interests__list-item">
+                <img class="link-img" src="./images/logo1.jpg">
+                <p class="profiles__link-text">
+                  Работа в банке
+                </p>
+            </li>
+              
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="middle-side">
+          <div class="main-info-container own-profile-container">
+            <h1 class="main-info__name">
+              Лорен Наполи
+            </h1>
+            <ul class="main-info__list">
+              <li class="main-info__list-item">
+                <span class="main-info__parameter-key">
+                  Пол
+                </span>
+                <span class="main-info__parameter-value">
+                  женский
+                </span>
+              </li>
+              <li class="main-info__list-item">
+                <span class="main-info__parameter-key">
+                  День рождения
+                </span>
+                <span class="main-info__parameter-value">
+                  19 ноября
+                </span>
+              </li>
+              <li class="main-info__list-item">
+                <span class="main-info__parameter-key">
+                  Должность
+                </span>
+                <span class="main-info__parameter-value">
+                  финансовый аналитик
+                </span>
+              </li>
+              <li class="main-info__list-item">
+                <span class="main-info__parameter-key">
+                  Статус
+                </span>
+                <span class="main-info__parameter-value">
+                  заданный статус
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div class="divider"></div>
+          <h2 class="posts-container__title">
+            Фильтры
+          </h2>
+          <form class="settings-container">
+            <input class="search-input input" name="search" type="text" placeholder="Найти по фразе...">
+            <div class="filter-container date-filter-container">
+              <label class="filter-label" for="date">
+                Дата
+              </label>
+              <input type="text" class="filter-input input" name="date" id="date" placeholder="Фильтровать">
+            </div>
+            <div class="filter-container tag-filter-container">
+              <label class="filter-label" for="tag">
+                Тег
+              </label>
+              <input type="select" class="filter-input input" name="tag" id="tag" placeholder="Фильтровать">
+            </div>
+            <div class="filter-container type-filter-container">
+              <label class="filter-label" for="type">
+                Тип
+              </label>
+              <input type="select" class="filter-input input" name="type" id="type" placeholder="Фильтровать">
+            </div>
+            <div class="sorting-container filter-container">
+              <p class="filter-label">Сортировка</p>
+              <div class="sorting__svgs">
+                <svg class="arrow-sorting arrow-down" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 5V19M12 19L5 12M12 19L19 12" 
+                    stroke="currentColor" 
+                    stroke-width="2" 
+                    stroke-linecap="round" 
+                    stroke-linejoin="round"/>
+                </svg>
+                <svg class="arrow-sorting arrow-up" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 5V19M12 19L5 12M12 19L19 12" 
+                    stroke="currentColor" 
+                    stroke-width="2" 
+                    stroke-linecap="round" 
+                    stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+            <div class="buttons">
+              <button class="btn-submit btn" type="submit">
+                Применить
+              </button>
+              <button class="btn-reset btn" type="reset">
+                Сбросить все
+              </button>
+          </div>
+          </form>
+          <div class="posts-container own-profile-container">
+          <div class="divider"></div>
+          <div class="favourites-container posts-inner-container">
+            <h2 class="posts-container__title">
+              Избранное
+            </h2>
+            <ul class="favoutites-posts-list posts-list">
+              <li class="posts-list-item">
+                <div class="author-container">
+                  <img class="link-img" src="./images/loren.png">
+                  <span class="author-name">
+                    Лорен Наполи
+                  </span>
+                </div>
+                <p class="post-text">
+                  Первый
+                </p>
+                <img class="post-img" src="./images/logo1.jpg">
+              </li>
+              <li class="posts-list-item">
+                <div class="author-container">
+                  <img class="link-img" src="./images/loren.png">
+                  <span class="author-name">
+                    Лорен Наполи
+                  </span>
+                </div>
+                <p class="post-text">
+                  Первый Второй
+                </p>
+                <img class="post-img" src="./images/logo1.jpg">
+              </li>
+              <li class="posts-list-item">
+                <div class="author-container">
+                  <img class="link-img" src="./images/loren.png">
+                  <span class="author-name">
+                    Лорен Наполи
+                  </span>
+                </div>
+                <p class="post-text">
+                  Второй Третий
+                </p>
+                <img class="post-img" src="./images/logo1.jpg">
+              </li>
+              <li class="posts-list-item">
+                <div class="author-container">
+                  <img class="link-img" src="./images/loren.png">
+                  <span class="author-name">
+                    Лорен Наполи
+                  </span>
+                </div>
+                <p class="post-text">
+                  Третий четвертый
+                </p>
+                <img class="post-img" src="./images/logo1.jpg">
+              </li>
+              <li class="posts-list-item">
+                <div class="author-container">
+                  <img class="link-img" src="./images/loren.png">
+                  <span class="author-name">
+                    Лорен Наполи
+                  </span>
+                </div>
+                <p class="post-text">
+                  Четвертый пятый
+                </p>
+                <img class="post-img" src="./images/logo1.jpg">
+              </li>
+              <li class="posts-list-item">
+                <div class="author-container">
+                  <img class="link-img" src="./images/loren.png">
+                  <span class="author-name">
+                    Лорен Наполи
+                  </span>
+                </div>
+                <p class="post-text">
+                  Пятый шестой первый
+                </p>
+                <img class="post-img" src="./images/logo1.jpg">
+              </li>
+              <li class="posts-list-item">
+                <div class="author-container">
+                  <img class="link-img" src="./images/loren.png">
+                  <span class="author-name">
+                    Лорен Наполи
+                  </span>
+                </div>
+                <p class="post-text">
+                  Тестовый пост
+                </p>
+                <img class="post-img" src="./images/logo1.jpg">
+              </li>
+            </ul>
+          </div>
+          <div class="divider"></div>
+          <div class="other-posts-container posts-inner-container">
+
+          </div>
+          </div>
+      </section>
+      <section class="profiles">
+        <h2 class="profiles__title">
+          Другие интересные страницы
+        </h2>
+      </section>
     </main>
     <a class="arrow" href="index.html">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" height="50" width="50" viewBox="0 0 24 24">
@@ -68,7 +322,9 @@
         <path d="M8 14H12" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
       </svg>
     </a>
-  </body>
+
+      <!-- ШАБЛОНЫ -->
+      <!-- ШАБЛОН ПОПОВЕРА С НАВИГАЦИЕЙ -->
     <template id="template__navigation-icons">
       <div class="navigation-icons__container">
         <ul class="navigation-icons__list">
@@ -83,4 +339,72 @@
         </ul>
       </div>
     </template>
+
+    <!-- ШАБЛОН СПИСКА ДРУГИХ ПРОФИЛЕЙ -->
+    <template id="template__profiles-container">
+      <div class="profiles__container">
+          <ul class="profiles__list">   
+          </ul>
+        </div>
+    </template>
+
+    <!-- ШАБЛОН ОСНОВНОЙ ИНФОРМАЦИИ -->
+    <template id="template__main-information">
+      <div class="main-info-container own-profile-container">
+        <h1 class="main-info__name">
+        </h1>
+        <ul class="main-info__list">
+        </ul>
+      </div>
+    </template>
+
+     <!-- ШАБЛОН АВАТАР -->
+    <template id="template__avatar">
+      <div class="avatar-container">
+        <img class="avatar-img" src="">
+      </div>
+    </template>
+
+     <!-- ШАБЛОН ОБО МНЕ -->
+    <template id="template__about-me">
+      <div class="about-me-container own-profile-container">
+        <h2 class="about-me__title">
+          Обо мне
+        </h2>
+        <div class="divider"></div>
+        <div class="about-me__body">
+          <ul class="about-me__list">
+          </ul>
+        </div>
+      </div>
+    </template>
+
+      <!-- ШАБЛОН ДРУЗЬЯ -->
+    <template id="template__friends">
+      <div class="friends-container own-profile-container">
+        <h2 class="friends-container__title">
+          Друзья
+        </h2>
+        <div class="divider"></div>
+        <div class="friends__body">
+          <ul class="friends__list">
+          </ul>
+        </div>
+      </div>
+    </template>
+
+      <!-- ШАБЛОН ИНТЕРЕСЫ -->
+    <template id="template__interests">
+      <div class="interests-container own-profile-container">
+        <h2 class="interests-container__title">
+          Интересы
+        </h2>
+        <div class="divider"></div>
+        <div class="interests__body">
+          <ul class="interests__list">
+          </ul>
+        </div>
+      </div>
+    </template>
+  </body>
 </html>

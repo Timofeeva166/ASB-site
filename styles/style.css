@@ -218,18 +218,10 @@
   border-radius: 5px;
 }
 
-.anonce {
-  grid-row: 3;
-}
-
 .hero__title {
   z-index: 2;
   font-size: clamp(3.125rem, 2.4648rem + 2.8169vw, 5rem);
   line-height: 100%;
-}
-
-.anonce .hero__title {
-  font-size: clamp(1.875rem, 1.2148rem + 2.8169vw, 3.75rem);
 }
 
 .hero__quote {
@@ -277,6 +269,7 @@
   border-radius: 5px;
   padding: 20px;
   background-color: var(--block-background-color);
+  inline-size: 100%;
 }
 
 .section__title {
@@ -289,14 +282,10 @@
   inline-size: fit-content;
 }
 
-.anonce .section__title {
-  align-self: start;
-}
-
 .staff__card-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: 1fr;
   grid-auto-flow: dense;
   gap: 30px;
 }

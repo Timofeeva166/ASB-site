@@ -30,8 +30,6 @@ const indexArr = [
   }
 ];
 
-iconElse?.addEventListener('click', (e) => onClick(e, indexArr));
-
 const cards = document.querySelectorAll('.staff__card-list-item');
 const closeButtons = document.querySelectorAll('.close-icon');
 
@@ -56,3 +54,4 @@ closeButtons.forEach(btn => {
 
 loadTheme();
 themeContainer.addEventListener('click', toggleTheme);
+iconElse?.addEventListener('click', (e) => onClick(e, indexArr));
