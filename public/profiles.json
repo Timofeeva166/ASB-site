@@ -1,0 +1,88 @@
+{
+  "success": true,
+  "data": {
+    "characters": {
+      "aros": {
+        "id": "aros",
+        "mainInfo": {
+          "name": "Арос Свифт",
+          "sex": "мужской",
+          "position": "Системный администратор",
+          "birthdate": "1 января",
+          "status": "Статус Ароса"
+        },
+        "avatar": "./images/aros.png",
+        "aboutMe": [
+          "Люблю программировать на Python",
+          "Занимаюсь спортом 3 раза в неделю",
+          "Мечтаю посетить Японию"
+        ],
+        "friends": ["loren", "kairen"],
+        "interests": [
+          {
+            "name": "Футбол",
+            "img": "./images/football.png"
+          },
+          {
+            "name": "Шахматы",
+            "img": "./images/chess.png"
+          },
+          {
+            "name": "Книги",
+            "img": "./images/books.png"
+          }
+        ]
+      },
+      "loren": {
+        "id": "loren",
+        "mainInfo": {
+          "name": "Лорен Наполи",
+          "sex": "женский",
+          "position": "Финансовый аналитик",
+          "birthdate": "19 ноября",
+          "status": "Статус Лорен"
+        },
+        "avatar": "./images/loren.png",
+        "aboutMe": [
+          "Обожаю анализировать данные",
+          "Путешествую по Европе",
+          "Изучаю испанский язык"
+        ],
+        "friends": ["aros", "kairen"],
+        "interests": [
+          {
+            "name": "Волейбол",
+            "img": "./images/volleyball.png"
+          },
+          {
+            "name": "Рисование",
+            "img": "./images/drawing.png"
+          }
+        ]
+      },
+      "kairen": {
+        "id": "kairen",
+        "mainInfo": {
+          "name": "Кайрен Фортин",
+          "sex": "мужской",
+          "position": "Разработчик",
+          "birthdate": "15 марта",
+          "status": "Статус Кайрена"
+        },
+        "avatar": "./images/kairen.png",
+        "aboutMe": [
+          "фанат реакта",
+          "библиотеки",
+          "путешествия"
+        ],
+        "friends": ["aros", "loren"],
+        "interests": [
+          {
+            "name": "Киберспорт",
+            "img": "./images/esports.png"
+          }
+        ]
+      }
+    }
+  }
+}

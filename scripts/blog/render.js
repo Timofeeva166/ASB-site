@@ -9,8 +9,9 @@ const createCardForCharacter = (character) => {
   listItem.classList.add(classes.staffListItem);
   listItem.dataset.id = character.id;
 
-  const article = document.createElement('article');
-  article.classList.add(classes.staffCard);
+  const link = document.createElement('a');
+  link.classList.add(classes.staffCard);
+  link.href = `pages.html?id=${character.id}`;
 
   const img = document.createElement('img');
   img.classList.add(classes.cardImg);
@@ -21,8 +22,8 @@ const createCardForCharacter = (character) => {
   name.classList.add(classes.cardText);
   name.textContent = character.name;
 
-  article.append(img, name);
-  listItem.append(article);
+  link.append(img, name);
+  listItem.append(link);
 
   return listItem;
 }
@@ -51,8 +52,7 @@ export const renderCards = (container, characters) => {
 }
 
 //показать ошибку
-export const showError = (container, retryCallback) => {
-  if (!container) return;
+export const showError = (retryCallback) => {
 
   main.innerHTML = `
     <div class="${classes.errorState}">

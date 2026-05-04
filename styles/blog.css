@@ -13,20 +13,6 @@
   inline-size: 100%;
 }
 
-.loader {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  block-size: 100%;
-  inline-size: 100%;
-  background-color: var(--main-background-color);
-  font-size: 30px;
-  border-radius: 5px;
-}
-
 /*пока мало карточек*/
 @media (width > 660px) {
   .staff__card-list {

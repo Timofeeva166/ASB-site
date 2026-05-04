@@ -29,13 +29,17 @@ const initBlog = async () => {
   toggleLoader('on');
 
   try {
+    
     const rawData = await fetchData(urls.allPages);
     const data = rawData.data['all-pages'];
     renderCards(list, data);
     setupClickHandler();
+
   } catch (error) {
+
     console.error('Ошибка инициализации:', error);
-    showError(list, () => initBlog());
+    showError(() => initBlog());
+
   } finally {
     toggleLoader('off');
   }

@@ -29,10 +29,6 @@
   font-size: 18px;
 }
 
-.accent-text {
-  color: var(--accent-color);
-}
-
 .clothes-img {
   align-self: center;
   inline-size: clamp(200px, 70vi, 700px);

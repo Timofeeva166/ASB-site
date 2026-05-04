@@ -523,8 +523,26 @@ body:has(.resume[open]) {
 }
 
 .hide-desktop {
-    display: none;
-  }
+  display: none;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  block-size: 100%;
+  inline-size: 100%;
+  background-color: var(--main-background-color);
+  font-size: 30px;
+  border-radius: 5px;
+}
+
+.accent-text {
+  color: var(--accent-color);
+}
 
 @media (width < 1240px) {
   .resume__img {

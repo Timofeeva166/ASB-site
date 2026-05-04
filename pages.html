@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./styles/posts.css" />
     <link rel="stylesheet" href="./styles/animations.css" />
     <link rel="icon" href="./images/logo.ico" sizes="any">
-    <script type="module" src="./scripts/pages.js" defer></script>
+    <script type="module" src="./scripts/profiles/profiles.js" defer></script>
   </head>
   <body class="content">
     <header class="header">
@@ -45,7 +45,7 @@
     <main class="main">
       <section class="left-side">
         <div class="avatar-container">
-          <img class="avatar-img" src="./images/loren.png">
+          <img class="avatar-img" src="">
         </div>
         <div class="about-me-container own-profile-container">
           <h2 class="about-me__title">
@@ -54,15 +54,6 @@
           <div class="divider"></div>
           <div class="about-me__body">
             <ul class="about-me__list">
-              <li class="about-me__list-item">
-                Первый пункт
-              </li>
-              <li class="about-me__list-item">
-                Второй пункт
-              </li>
-              <li class="about-me__list-item">
-                Третий пункт
-              </li>
             </ul>
           </div>
         </div>
@@ -73,21 +64,6 @@
           <div class="divider"></div>
           <div class="friends__body">
             <ul class="friends__list">
-              <li class="friends__list-item">
-                <a class="friends__list-link">
-                  <img class="link-img" src="./images/kai.png">
-                </a>
-              </li>
-              <li class="friends__list-item">
-                <a class="friends__list-link">
-                  <img class="link-img" src="./images/elen.png">
-                </a>
-              </li>
-              <li class="friends__list-item">
-                <a class="friends__list-link">
-                  <img class="link-img" src="./images/aros.png">
-                </a>
-              </li>
             </ul>
           </div>
         </div>
@@ -98,13 +74,6 @@
           <div class="divider"></div>
           <div class="interests__body">
             <ul class="interests__list">
-              <li class="interests__list-item">
-                <img class="link-img" src="./images/logo1.jpg">
-                <p class="profiles__link-text">
-                  Работа в банке
-                </p>
-            </li>
-              
             </ul>
           </div>
         </div>
@@ -112,41 +81,8 @@
       <section class="middle-side">
           <div class="main-info-container own-profile-container">
             <h1 class="main-info__name">
-              Лорен Наполи
             </h1>
             <ul class="main-info__list">
-              <li class="main-info__list-item">
-                <span class="main-info__parameter-key">
-                  Пол
-                </span>
-                <span class="main-info__parameter-value">
-                  женский
-                </span>
-              </li>
-              <li class="main-info__list-item">
-                <span class="main-info__parameter-key">
-                  День рождения
-                </span>
-                <span class="main-info__parameter-value">
-                  19 ноября
-                </span>
-              </li>
-              <li class="main-info__list-item">
-                <span class="main-info__parameter-key">
-                  Должность
-                </span>
-                <span class="main-info__parameter-value">
-                  финансовый аналитик
-                </span>
-              </li>
-              <li class="main-info__list-item">
-                <span class="main-info__parameter-key">
-                  Статус
-                </span>
-                <span class="main-info__parameter-value">
-                  заданный статус
-                </span>
-              </li>
             </ul>
           </div>
           <div class="divider"></div>
@@ -304,8 +240,17 @@
         <h2 class="profiles__title">
           Другие интересные страницы
         </h2>
+        <div class="profiles__container">
+          <ul class="profiles__list">   
+          </ul>
+        </div>
       </section>
     </main>
+    <div class="loader">
+      <p class="loader__text">
+        Загрузка...
+      </p>
+    </div>
     <a class="arrow" href="index.html">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" height="50" width="50" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m11 5-7 7 7 7M4 12h16"/>

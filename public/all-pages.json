@@ -10,22 +10,12 @@
       {
         "id": "kairen",
         "name": "Кайрен Фортин",
-        "img": "./images/kai.png"
+        "img": "./images/kairen.png"
       },
       {
-        "id": "aros",
-        "name": "Арос Свифт",
-        "img": "./images/aros.png"
-      },
-      {
-        "id": "kairen",
-        "name": "Кайрен Фортин",
-        "img": "./images/kai.png"
-      },
-      {
-        "id": "kairen",
-        "name": "Кайрен Фортин",
-        "img": "./images/kai.png"
+        "id": "loren",
+        "name": "Лорен Наполи",
+        "img": "./images/loren.png"
       }
     ]
   }

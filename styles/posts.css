@@ -124,6 +124,12 @@
   background-color: var(--button-color);
 }
 
+.about-me__list {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
 .friends-container {
   grid-column: 1;
   grid-row: 3;
@@ -294,8 +300,23 @@
   justify-content: center;
   align-items: center;
   gap: 25px;
+  margin: auto;
 }
 
+.staff__card {
+  flex-direction: row;
+  align-items: center;
+}
+
+.card-img {
+  block-size: 48px;
+  inline-size: 48px;
+  border-radius: 50%;
+}
+
+.card-text {
+  font-size: 12px;
+}
 
 
 
