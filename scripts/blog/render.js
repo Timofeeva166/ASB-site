@@ -70,7 +70,6 @@ export const showError = (retryCallback) => {
 //показать лоадер
 export const toggleLoader = (action) => {
   const loader = document.querySelector(`.${classes.loader}`);
-  console.log(action);
 
   if (action === 'on') {
     loader.style.display = 'flex';
@@ -85,7 +84,6 @@ export const changeStylesForCards = () => {
 
   if (window.innerWidth > 768) {
     const cards = document.querySelectorAll('.staff__card-list-item');
-    console.log(cards.length);
     if (cards.length < 5) {
       list.style.gridTemplateColumns = 'repeat(auto-fit, 250px)';
     } else {

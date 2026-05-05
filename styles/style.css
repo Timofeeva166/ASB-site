@@ -108,6 +108,7 @@
 
 .active {
   border: 1px solid var(--text-color);
+  border-radius: 5px;
 }
 
 .main {

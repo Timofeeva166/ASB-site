@@ -15,7 +15,6 @@ export const setTheme = (active) => {
   const text = active.textContent.trim();
 
   let themeClass = Object.keys(themes).find(key => themes[key] === text);
-  console.log(Object.keys(themes));
   if (themeClass) {
     html.className = themeClass;
     localStorage.setItem('selectedTheme', text);

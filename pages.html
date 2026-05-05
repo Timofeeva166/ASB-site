@@ -85,156 +85,102 @@
             <ul class="main-info__list">
             </ul>
           </div>
-          <div class="divider"></div>
-          <h2 class="posts-container__title">
-            Фильтры
-          </h2>
-          <form class="settings-container">
-            <input class="search-input input" name="search" type="text" placeholder="Найти по фразе...">
-            <div class="filter-container date-filter-container">
-              <label class="filter-label" for="date">
-                Дата
-              </label>
-              <input type="text" class="filter-input input" name="date" id="date" placeholder="Фильтровать">
-            </div>
-            <div class="filter-container tag-filter-container">
-              <label class="filter-label" for="tag">
-                Тег
-              </label>
-              <input type="select" class="filter-input input" name="tag" id="tag" placeholder="Фильтровать">
-            </div>
-            <div class="filter-container type-filter-container">
-              <label class="filter-label" for="type">
-                Тип
-              </label>
-              <input type="select" class="filter-input input" name="type" id="type" placeholder="Фильтровать">
-            </div>
-            <div class="sorting-container filter-container">
-              <p class="filter-label">Сортировка</p>
-              <div class="sorting__svgs">
-                <svg class="arrow-sorting arrow-down" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 5V19M12 19L5 12M12 19L19 12" 
-                    stroke="currentColor" 
-                    stroke-width="2" 
-                    stroke-linecap="round" 
-                    stroke-linejoin="round"/>
-                </svg>
-                <svg class="arrow-sorting arrow-up" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 5V19M12 19L5 12M12 19L19 12" 
-                    stroke="currentColor" 
-                    stroke-width="2" 
-                    stroke-linecap="round" 
-                    stroke-linejoin="round"/>
-                </svg>
-              </div>
-            </div>
-            <div class="buttons">
-              <button class="btn-submit btn" type="submit">
-                Применить
-              </button>
-              <button class="btn-reset btn" type="reset">
-                Сбросить все
-              </button>
-          </div>
-          </form>
+
+
+
+
           <div class="posts-container own-profile-container">
-          <div class="divider"></div>
           <div class="favourites-container posts-inner-container">
-            <h2 class="posts-container__title">
-              Избранное
-            </h2>
-            <ul class="favoutites-posts-list posts-list">
-              <li class="posts-list-item">
-                <div class="author-container">
-                  <img class="link-img" src="./images/loren.png">
-                  <span class="author-name">
-                    Лорен Наполи
-                  </span>
+            <div class="utils-container">
+              <div class="sorting-container">
+                <p class=>Сортировка:</p>
+                <div class="sorting__svgs">
+                  <svg class="arrow-sorting arrow-down active" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 5V19M12 19L5 12M12 19L19 12" 
+                    stroke="currentColor" 
+                    stroke-width="2" 
+                    stroke-linecap="round" 
+                    stroke-linejoin="round"/>
+                  </svg>
+                  <svg class="arrow-sorting arrow-up" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 5V19M12 19L5 12M12 19L19 12" 
+                    stroke="currentColor" 
+                    stroke-width="2" 
+                    stroke-linecap="round" 
+                    stroke-linejoin="round"/>
+                  </svg>
                 </div>
-                <p class="post-text">
-                  Первый
-                </p>
-                <img class="post-img" src="./images/logo1.jpg">
-              </li>
-              <li class="posts-list-item">
-                <div class="author-container">
-                  <img class="link-img" src="./images/loren.png">
-                  <span class="author-name">
-                    Лорен Наполи
-                  </span>
+              </div>
+              <button class="filter-button">Фильтровать</button>
+            </div>
+            <form class="settings-container">
+              <h2 class="posts-container__title">
+                Фильтры
+              </h2>
+              <div class="divider"></div>
+              <div class="fields-container">
+                <div class="filter-container search-filter-container">
+                  <label class="filter-label" for="text">
+                    Фраза
+                  </label>
+                  <div class="input-container">
+                    <input class="filter-input input" name="text" type="text" id="text" placeholder="Введите значение">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="remove-icon" width="24" height="24" viewBox="0 0 24 24">
+                      <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z" fill="currentColor"/>
+                    </svg>
+                  </div>
                 </div>
-                <p class="post-text">
-                  Первый Второй
-                </p>
-                <img class="post-img" src="./images/logo1.jpg">
-              </li>
-              <li class="posts-list-item">
-                <div class="author-container">
-                  <img class="link-img" src="./images/loren.png">
-                  <span class="author-name">
-                    Лорен Наполи
-                  </span>
+                <div class="filter-container date-filter-container">
+                  <label class="filter-label" for="date">
+                    Дата
+                  </label>
+                  <div class="input-container">
+                    <input type="text" class="filter-input input" name="date" id="date" placeholder="Введите значение">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="remove-icon" width="24" height="24" viewBox="0 0 24 24">
+                      <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z" fill="currentColor"/>
+                    </svg>
+                  </div>
                 </div>
-                <p class="post-text">
-                  Второй Третий
-                </p>
-                <img class="post-img" src="./images/logo1.jpg">
-              </li>
-              <li class="posts-list-item">
-                <div class="author-container">
-                  <img class="link-img" src="./images/loren.png">
-                  <span class="author-name">
-                    Лорен Наполи
-                  </span>
+                <div class="filter-container tag-filter-container">
+                  <label class="filter-label" for="tags">
+                    Тег
+                  </label>
+                  <div class="input-container">
+                    <input type="select" class="filter-input input" name="tags" id="tags" placeholder="Введите значение">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="remove-icon" width="24" height="24" viewBox="0 0 24 24">
+                     <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z" fill="currentColor"/>
+                   </svg>
+                  </div>
                 </div>
-                <p class="post-text">
-                  Третий четвертый
-                </p>
-                <img class="post-img" src="./images/logo1.jpg">
-              </li>
-              <li class="posts-list-item">
-                <div class="author-container">
-                  <img class="link-img" src="./images/loren.png">
-                  <span class="author-name">
-                    Лорен Наполи
-                  </span>
+                <div class="filter-container author-filter-container">
+                  <label class="filter-label" for="author">
+                    Автор
+                  </label>
+                  <div class="input-container">
+                    <input type="select" class="filter-input input" name="author" id="author" placeholder="Введите значение">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="remove-icon" width="24" height="24" viewBox="0 0 24 24">
+                      <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z" fill="currentColor"/>
+                    </svg>
+                  </div>
                 </div>
-                <p class="post-text">
-                  Четвертый пятый
-                </p>
-                <img class="post-img" src="./images/logo1.jpg">
-              </li>
-              <li class="posts-list-item">
-                <div class="author-container">
-                  <img class="link-img" src="./images/loren.png">
-                  <span class="author-name">
-                    Лорен Наполи
-                  </span>
-                </div>
-                <p class="post-text">
-                  Пятый шестой первый
-                </p>
-                <img class="post-img" src="./images/logo1.jpg">
-              </li>
-              <li class="posts-list-item">
-                <div class="author-container">
-                  <img class="link-img" src="./images/loren.png">
-                  <span class="author-name">
-                    Лорен Наполи
-                  </span>
-                </div>
-                <p class="post-text">
-                  Тестовый пост
-                </p>
-                <img class="post-img" src="./images/logo1.jpg">
-              </li>
+              </div>
+              <div class="divider"></div>
+              <div class="buttons">
+                <button class="btn-reset btn" type="reset">
+                  Сбросить
+                </button>
+                <button class="btn-submit btn" type="button">
+                  Применить
+                </button>
+              </div>
+            </form>
+            <div class="divider"></div>
+            <ul class="posts-list">       
             </ul>
           </div>
-          <div class="divider"></div>
-          <div class="other-posts-container posts-inner-container">
 
           </div>
-          </div>
+        </div>
       </section>
       <section class="profiles">
         <h2 class="profiles__title">

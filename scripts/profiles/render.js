@@ -1,19 +1,4 @@
-const createKeyValuePair = () => {
-  const createKey = (text) => {
-    const span = document.createElement('span');
-    span.className = 'main-info__parameter-key';
-    span.textContent = text;
-    return span;
-  }
-  const createValue = (text) => {
-    const span = document.createElement('span');
-    span.className = 'main-info__parameter-value';
-    span.textContent = text;
-    return span;
-  }
-
-  return {createKey, createValue};
-}
+import { createKeyValuePair } from "./keyValueFabric.js";
 
 //заполняет основную информацию
 const fillMainInfo = (data) => {
@@ -35,7 +20,7 @@ const fillMainInfo = (data) => {
     .forEach(([key, value]) => {
       const listItem = document.createElement('li');
       listItem.className = 'main-info__list-item';
-      listItem.append(createKey(key), createValue(value));
+      listItem.append(createKey(key, 'main-info__parameter-key'), createValue(value, 'main-info__parameter-value'));
       list.appendChild(listItem);
     });
 }

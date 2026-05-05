@@ -1,6 +1,7 @@
 export const urls = {
   allPages: '/public/all-pages.json',
-  profiles: '/public/profiles.json'
+  profiles: '/public/profiles.json',
+  posts: '/public/posts.json'
 }
 
 export const classes = {
