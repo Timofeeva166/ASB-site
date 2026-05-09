@@ -6,15 +6,18 @@ const main = document.querySelector(`.${classes.main}`);
 //TODO: переделать через клонирование шаблона
 const createCardForCharacter = (character) => {
   const listItem = document.createElement('li');
-  listItem.classList.add(classes.staffListItem);
+  listItem.classList.add('staff__card-list-item');
   listItem.dataset.id = character.id;
 
   const link = document.createElement('a');
-  link.classList.add(classes.staffCard);
+  link.classList.add('staff__card');
   link.href = `pages.html?id=${character.id}`;
 
+  const imgContainer = document.createElement('div');
+  imgContainer.classList.add('staff__image-container');
+
   const img = document.createElement('img');
-  img.classList.add(classes.cardImg);
+  img.classList.add('card-img');
   img.src = character.img;
   img.alt = character.name;
 
@@ -22,7 +25,8 @@ const createCardForCharacter = (character) => {
   name.classList.add(classes.cardText);
   name.textContent = character.name;
 
-  link.append(img, name);
+  imgContainer.appendChild(img);
+  link.append(imgContainer, name);
   listItem.append(link);
 
   return listItem;

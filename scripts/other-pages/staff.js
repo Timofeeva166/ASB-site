@@ -26,7 +26,7 @@ const staffArr = [
   }
 ];
 
-function toggleCheckboxClass(event) {
+export function toggleCheckboxClass(event) {
   const checkbox = event.target;
   if (checkbox.checked) {
     checkbox.classList.add('checked');

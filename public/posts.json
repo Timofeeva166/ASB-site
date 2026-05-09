@@ -2,14 +2,21 @@
   "success": true,
   "data": {
     "characters": {
-      "kairen": {
-        "id": "kairen",
+      "elen": {
+        "id": "elen",
         "posts": [
           {
             "id": 1,
             "text": "С помощью одного только чайника (кипятка) можно приготовить немало блюд, особенно быстрых и простых: Горячие напитки Чай, кофе (растворимый или в чашку через фильтр), какао, травяные настои, горячий шоколад.Каши и завтраки Овсянка, гречневая, рисовая или манная каша быстрого приготовления — залить кипятком в термокружке или миске с крышкой, укутать и дать настояться. Киноа или булгур (мелкий) — запарить аналогично. Супы быстрого приготовления Лапша, пюре или суп из пакетика.",
             "images": [
-              "./images/kairen.png"
+              "./images/loren.png",
+              "./images/elen.png",
+              "./images/kairen.png",
+              "./images/villiam.png",
+              "./images/galina.png",
+              "./images/aros.png",
+              "./images/villiam.png",
+              "./images/galina.png"
             ],
             "type": "смешанный",
             "tags": [
@@ -17,7 +24,7 @@
               "second",
               "third"
             ],
-            "date": "07.03.2024",
+            "date": "07.03.2027",
             "author": "kairen"
           },
           {
@@ -25,7 +32,10 @@
             "text": "Здрасьте",
             "images": [
               "./images/kairen.png",
-              "./images/elen.png"
+              "./images/elen.png",
+              "./images/kairen.png",
+              "./images/elen.png",
+              "./images/kairen.png"
             ],
             "type": "смешанный",
             "tags": [

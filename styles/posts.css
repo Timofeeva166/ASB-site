@@ -30,7 +30,7 @@
 .profiles__list {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
   border-radius: 5px;
   padding: 20px;
   background-color: var(--block-background-color);
@@ -56,6 +56,14 @@
   border-radius: 50%;
   block-size: 48px;
   inline-size: 48px;
+  transition: box-shadow 0.4s ease;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.link-img:hover {
+  box-shadow: 0 0 10px var(--accent-color);
 }
 
 /* СТИЛИ ОСНОВНОГО ПРОФИЛЯ */
@@ -86,12 +94,13 @@
   gap: 30px;
   padding: 30px;
   background-color: var(--block-background-color);
+  border-radius: 5px;
 }
 
 .own-profile-container {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
   border-radius: 5px;
 }
 
@@ -100,6 +109,7 @@
   border-radius: 50%;
   block-size: 200px;
   inline-size: 200px;
+  object-fit: cover;
 }
 
 .main-info__name {
@@ -108,9 +118,23 @@
 
 .main-info__list {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: min-content 1fr min-content;
+  text-wrap: nowrap;
   grid-template-rows: repeat(2, min-content);
   gap: 10px;
+}
+
+.position {
+  justify-self: center;
+}
+
+.birthdate {
+  justify-self: end;
+}
+
+.status {
+  grid-row: 2;
+  grid-column: 1 / 4;
 }
 
 .main-info__list-item {
@@ -143,9 +167,10 @@
   gap: 20px;
 }
 
-.interests-container {
-  grid-column: 1;
-  grid-row: 4;
+.interests__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
 }
 
 .interests__list-item {
@@ -169,13 +194,25 @@
 .utils-container {
   align-self: end;
   display: flex;
-  gap: 20px;
+  justify-content: space-between;
+  inline-size: 100%;
 }
 
 .filter-button {
+  display: flex;
+  gap: 5px;
   background-color: transparent;
   padding: 5px;
   cursor: pointer;
+  transition: color 0.4s ease;
+}
+
+.filter-button:hover {
+  color: var(--accent-color);
+}
+
+.filter-active {
+  color: var(--accent-color);
 }
 
 .settings-container {
@@ -185,10 +222,31 @@
   position: absolute;
   background-color: var(--popover-menu-background-color);
   padding: 20px;
-  border-radius: 25px;
-  border: 1px solid var(--text-color);
+  border-radius: 20px;
   inline-size: 700px;
-  z-index: 100000;
+  z-index: 3;
+  box-shadow: 4px 4px 6px var(--accent-color);
+}
+
+.settings-header-container {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.question {
+  margin-block-start: 3px;
+  cursor: pointer;
+}
+
+.tooltip {
+  display: none;
+  position: absolute;
+  background-color: var(--button-color);
+  color: var(--title-color);
+  padding: 2px 5px;
+  border-radius: 5px;
+  z-index: 4;
 }
 
 .input {
@@ -209,6 +267,7 @@
 
 .input:focus {
   outline: 2px solid var(--subsection-title-bacground-color);
+  border: none;
 }
 
 .sorting-container {
@@ -283,11 +342,20 @@
   background-color: var(--button-color);
   cursor: pointer;
   inline-size: fit-content;
+  transition: background-color 0.4s ease;
 }
 
 .btn-reset {
   border: 2px solid var(--button-color);
   background-color: transparent;
+}
+
+.btn-submit:hover {
+  background-color: #ac8917;
+}
+
+.btn-reset:hover {
+  background-color: var(--button-theme-hover-color);
 }
 
 .buttons {
@@ -301,6 +369,46 @@
 
 
 /*  ПОСТЫ */
+.more-info {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+}
+
+.checkbox {
+  display: none;
+}
+
+.more-info-head {
+  display: flex;
+  gap: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  color: var(--subsection-title-bacground-color);
+  transition: color 0.4s ease;
+}
+
+.more-info-head:hover {
+  color: var(--accent-color);
+}
+
+.more-info-body {
+  opacity: 0;
+  transform: scaleY(0);
+  transform-origin: top;
+  block-size: 0;
+}
+
+.checkbox:checked ~ .more-info-body {
+  margin-block-start: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  opacity: 1;
+  transition: transform 0.4s ease;
+  transform: scaleY(1);
+  block-size: auto;
+}
 
 .posts-list {
   display: flex;
@@ -332,16 +440,121 @@
   inline-size: 100%;
 }
 
-.post-img {
-  border-radius: 5px;
-  zoom: 0.5;
-  object-fit: cover;
+/* В зависимости от количества фото */
+.post-images-container {
+  display: grid;
+  gap: 4px;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
-.post-images-container {
-  display: flex;
-  flex-wrap: wrap;
+/* Одна фотография */
+.post-images-container:has(.post-img:only-child) {
+  grid-template-columns: 1fr;
+}
+
+.post-images-container:has(.post-img:only-child) .post-img {
+  height: auto;
+  max-height: 500px;
+  object-fit: contain;
+}
+
+/* Две фотографии */
+.post-images-container:has(.post-img:nth-last-child(2):first-child) {
+  grid-template-columns: 1fr 1fr;
+}
+
+/* Три фотографии (первая большая) */
+.post-images-container:has(.post-img:nth-last-child(3):first-child) {
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.post-images-container:has(.post-img:nth-last-child(3):first-child) .post-img:first-child {
+  grid-row: span 2;
+}
+
+/* Четыре фотографии (сетка 2x2) */
+.post-images-container:has(.post-img:nth-last-child(4):first-child) {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+/* 5 фотографий*/
+.post-images-container:has(.post-img:nth-last-child(5):first-child) {
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr min-content;
+}
+
+.post-images-container:has(.post-img:nth-last-child(5):first-child) .post-img:first-child {
+  grid-row: 1;
+  grid-column: 1 / 5;
+}
+
+/* 6 фотографий*/
+.post-images-container:has(.post-img:nth-last-child(6):first-child) {
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr min-content;
+}
+
+.post-images-container:has(.post-img:nth-last-child(6):first-child) .post-img:first-child {
+  grid-row: 1;
+  grid-column: 1 / 6;
+}
+
+/* ДЛЯ НЕЧЕТНЫХ*/
+.post-images-container:has(.post-img:nth-last-child(7):first-child) {
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr min-content;
+}
+
+.post-images-container:has(.post-img:nth-last-child(7):first-child) .post-img:first-child {
+  grid-row: 1;
+  grid-column: 1 / 7;
+}
+
+/* ДЛЯ ЧЕТНЫХ */
+.post-images-container:has(.post-img:nth-last-child(8):first-child) {
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr min-content;
+}
+
+.post-images-container:has(.post-img:nth-last-child(8):first-child) .post-img:first-child {
+  grid-row: 1;
+  grid-column: 1 / 4;
+}
+
+.post-images-container:has(.post-img:nth-last-child(8):first-child) .post-img:nth-child(2) {
+  grid-row: 1;
+  grid-column: 4 / 7;
+}
+
+/* 9 фотографий*/
+.post-images-container:has(.post-img:nth-last-child(9):first-child) {
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: 1fr min-content;
+}
+
+.post-images-container:has(.post-img:nth-last-child(9):first-child) .post-img:first-child {
+  grid-row: 1;
+  grid-column: 1 / 9;
+}
+
+/* 10 фотографий*/
+.post-images-container:has(.post-img:nth-last-child(10):first-child) {
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: 1fr min-content;
+}
+
+.post-images-container:has(.post-img:nth-last-child(10):first-child) .post-img:first-child {
+  grid-row: 1;
+  grid-column: 1 / 10;
+}
+
+.post-img {
+  block-size: 100%;
   inline-size: 100%;
+  object-fit: cover;
 }
 
 .post-tags-container {
@@ -377,16 +590,29 @@
 .staff__card {
   flex-direction: row;
   align-items: center;
+  overflow: hidden;
+  padding: 15px;
 }
 
-.card-img {
+.staff__image-container {
   block-size: 48px;
   inline-size: 48px;
+  overflow: hidden;
   border-radius: 50%;
 }
 
-.card-text {
+.card-img {
+  block-size: 100%;
+  inline-size: 100%;
+  object-fit: scale-down;
+  object-position: center;
+  aspect-ratio: 1 / 1;
+  scale: 1.2;
+}
+
+.profiles__list .card-text {
   font-size: 12px;
+  z-index: 4;
 }
 
 .arrow {
@@ -398,6 +624,30 @@
 
 .arrow:hover {
   color: var(--button-color);
+}
+
+.all-pages-list-item {
+  background-color: var(--staff-card-color);
+  padding: 10px;
+  border-radius: 5px;
+  transition: transform 0.4s ease,
+  box-shadow 0.4s ease;
+}
+
+.all-pages-list-item:hover {
+  box-shadow: 0px 4px 4px var(--accent-color);
+  transform: translateY(-3px);
+}
+
+.all-pages-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.active ~ .arrow-sorting {
+  color: var(--accent-color);
+  border-radius: 5px;
 }
 
 @media (width < 1240px) {

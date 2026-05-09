@@ -5,9 +5,9 @@ const createAuthor = (data, profileData) => {
   const authorContainer = document.createElement('div');
   authorContainer.classList.add('author-container');
 
-  const authorAvatar = document.createElement('img');
+  const authorAvatar = document.createElement('div');
   authorAvatar.classList.add('link-img');
-  authorAvatar.src = `./images/${data.author}.png`;
+  authorAvatar.style.backgroundImage = `url(./images/${data.author}.png)`;
 
   const authorName = document.createElement('span');
   authorName.classList.add('author-name');

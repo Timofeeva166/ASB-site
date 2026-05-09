@@ -82,6 +82,49 @@
             "img": "./images/esports.png"
           }
         ]
+      },
+      "elen": {
+        "id": "elen",
+        "mainInfo": {
+          "name": "Элен Мур",
+          "sex": "женский",
+          "position": "Финансовый аудитор",
+          "birthdate": "8 января",
+          "status": "Статус Элен"
+        },
+        "avatar": "./images/len-avatar.png",
+        "aboutMe": [
+          "раз",
+          "два",
+          "три"
+        ],
+        "friends": ["aros", "loren"],
+        "interests": [
+          {
+            "name": "Excel и кофе (офисные мемы)",
+            "img": "./images/elen-int1.png"
+          },
+          {
+            "name": "Росточек (растения)",
+            "img": "./images/elen-int2.png"
+          },
+          {
+            "name": "Эльфийская тоска (психология)",
+            "img": "./images/elen-int3.png"
+          },
+          {
+            "name": "Твоё дыхание (эстетика)",
+            "img": "./images/elen-int4.png"
+          },
+          {
+            "name": "Книга на выходные (книжный клуб)",
+            "img": "./images/elen-int5.png"
+          },
+          {
+            "name": "Ночные прогулки (фотографии)",
+            "img": "./images/elen-int6.png"
+          }
+        ]
       }
     }
   }

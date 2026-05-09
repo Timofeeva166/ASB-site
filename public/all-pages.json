@@ -16,6 +16,11 @@
         "id": "loren",
         "name": "Лорен Наполи",
         "img": "./images/loren.png"
+      },
+      {
+        "id": "elen",
+        "name": "Элен Мур",
+        "img": "./images/len-avatar.png"
       }
     ]
   }

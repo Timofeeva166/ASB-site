@@ -6,43 +6,11 @@ import { renderProfile } from "./render.js";
 import { showError, toggleLoader } from "../blog/render.js";
 import { renderCards } from "../blog/render.js"
 import { renderPosts } from "./renderPosts.js";
+import { form, filterPosts, setupEventListeners, sortPosts, sortingContainer } from "./utils.js";
 
 const main = document.querySelector('.main');
-const filterBtn = document.querySelector('.filter-button');
-const popover = document.querySelector('.settings-container');
-const form = document.querySelector('.settings-container');
 const list = document.querySelector('.posts-list');
 const allPagesList = document.querySelector('.profiles__list');
-const removeIcon = document.querySelectorAll('.remove-icon');
-const submitBtn = document.querySelector('.btn-submit');
-
-let isPopoverOpen = false;
-let lastFormData = null;
-
-//двигает поповер
-const updatePosition = () => {
-  const buttonRect = filterBtn.getBoundingClientRect();
-  const popoverRect = popover.getBoundingClientRect();
-  
-  popover.style.top = `${buttonRect.bottom + window.scrollY + 10}px`;
-  popover.style.left = `${buttonRect.right + window.scrollX - popoverRect.width}px`;
-};
-
-//включает и выключает поповер
-const togglePopover = (e) => {
-  e.stopPropagation();
-
-  if (!popover) return;
-
-  if (!isPopoverOpen) {
-    popover.style.display = 'flex';
-    updatePosition();
-    isPopoverOpen = true;
-  } else {
-    popover.style.display = 'none';
-    isPopoverOpen = false;
-  }
-}
 
 //валидирует данные
 const validateData = (profileData, id) => {
@@ -75,7 +43,7 @@ const handlePosts = (postsData, profileData) => {
     if(list) {
       list.innerHTML = `
         <div class="${classes.errorState}">
-          <h2 class="title">Посты не найдены</h2>
+          <h2 class="title">У этого персонажа пока что нет постов</h2>
         </div>
       `;
     }
@@ -83,10 +51,9 @@ const handlePosts = (postsData, profileData) => {
     return;
   }
 
-  renderPosts(postsData.posts, profileData);
+  renderPosts(sortPosts(postsData.posts), profileData);
   return true;
 }
-
 
 //инициализирует профиль
 const initProfile = async () => {
@@ -94,84 +61,41 @@ const initProfile = async () => {
   toggleLoader('on');
 
   try {
+    //ЖДЕМ ЗАПРОСЫ
     const [rawProfileData, rawAllPagesData, rawPostsData] = await Promise.all([
       fetchData(urls.profiles),
       fetchData(urls.allPages),
       fetchData(urls.posts)
     ])
 
+    //ДОБИРАЕМСЯ К НЕОБХОДИМЫМ ДАННЫМ
     const id = getCurrentCharacterId();
     const profileData = rawProfileData.data;
     const allPagesData = rawAllPagesData.data['all-pages'];
     let postsData = rawPostsData.data.characters?.[`${id}`];
+    let filteredPosts = [];
 
+    //ВАЛИДИРУЕМ
     if (!validateData(profileData, id)) return;
 
+    //РЕНДЕРИМ ОСНОВНУЮ ИНФОРМАЦИЮ
     renderProfile(profileData, id);
 
+    //РЕНДЕРИМ КАРТОЧКИ ДРУГИХ ПЕРСОНАЖЕЙ
     if (allPagesList && allPagesData) {
       renderCards(allPagesList, allPagesData.filter(item => item.id !== id));
     }
 
+    //РЕНДЕРИМ ПОСТЫ
     handlePosts(postsData, profileData);
 
+    //НАВЕШИВАЕМ ОБРАБОТЧИК ФИЛЬТРА
     if (form) {
-      submitBtn.addEventListener('click', (e) => {
-        e.preventDefault();
+      filterPosts(postsData, profileData);
+    }
 
-        if (!postsData.posts || !Array.isArray(postsData.posts)) {
-          console.error('Нет данных для фильтрации');
-          return;
-        }
-
-        // данные по фильтрам
-        const rawFilterData = new FormData(form);
-        const formData = Object.fromEntries(rawFilterData.entries());
-
-        //копируем исходники
-        let filteredPosts = [...postsData.posts];
-
-        //для каждого ключа и значения по данным из фильтра
-        Object.entries(formData).forEach(([key, value]) => {
-          if (!value || value.trim() === '') {
-            return;
-          };
-
-          const searchValue = value.trim().toLowerCase(); //искомое значение
-
-          filteredPosts = filteredPosts.filter(post => {
-            const postValue = post[key]; //данные поста по ключу
-
-            if (postValue === undefined || postValue === null) return false;
-
-            if(Array.isArray(postValue)) { //для массивов
-              return postValue.some(item => String(item).toLowerCase().includes(searchValue));
-            }
-
-            return String(postValue).toLowerCase().includes(searchValue); //для остальных значений
-          });
-        });
-
-        const list = document.querySelector('.posts-list');
-        if (list) {
-          list.innerHTML = '';
-        }
-    
-        if (filteredPosts.length === 0) {
-          list.innerHTML = `
-            <div class="${classes.errorState}">
-              <h2 class="title">По вашему запросу ничего не найдено</h2>
-            </div>
-          `;
-        } else {
-          renderPosts(filteredPosts, profileData);
-        }
-
-        if (popover) {
-          popover.style.display = 'none';
-          isPopoverOpen = false;
-        };
-      })
+    if (sortingContainer) {
+      
     }
 
   } catch(error) {
@@ -182,36 +106,6 @@ const initProfile = async () => {
     toggleLoader('off');
   }
 }
-
-//включает обработчики
-const setupEventListeners = () => {
-  if(filterBtn) {
-    filterBtn.addEventListener('click', togglePopover);
-  }
-
-  if(form) {
-    form.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const removeIcon = e.target.closest('.remove-icon');
-
-      if (removeIcon) {
-        const inputContainer = e.target.closest('.input-container');
-        const input = inputContainer?.querySelector('.input');
-
-        if (input) {
-          input.value = '';
-        }
-      }
-    })
-  }
-
-  window.addEventListener('resize', () => {
-    if (isPopoverOpen && filterBtn && popover) {
-      updatePosition();
-    }
-  });
-}
-
 
 loadThemeWithoutButtons();
 initProfile();

@@ -389,7 +389,7 @@
   border-radius: 50%;
   background-color: var(--button-color);
   transition: transform 0.4s ease;
-  z-index: 10;
+  z-index: 3;
 }
 
 .chat:hover {
@@ -495,11 +495,10 @@ body:has(.resume[open]) {
   position: absolute;
   background-color: var(--popover-menu-background-color);
   border-radius: 20px;
-  z-index: 1000;
-  border: 1px solid var(--text-color);
+  z-index: 4;
   display: flex;
   padding: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0px 4px 12px var(--accent-color);
 }
 
 .navigation-icons__list {

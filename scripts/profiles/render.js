@@ -19,8 +19,8 @@ const fillMainInfo = (data) => {
     .filter(([key]) => key !== 'name')
     .forEach(([key, value]) => {
       const listItem = document.createElement('li');
-      listItem.className = 'main-info__list-item';
-      listItem.append(createKey(key, 'main-info__parameter-key'), createValue(value, 'main-info__parameter-value'));
+      listItem.className = `main-info__list-item ${key}`;
+      listItem.append(createKey(key, `main-info__parameter-key`), createValue(value, `main-info__parameter-value`));
       list.appendChild(listItem);
     });
 }
@@ -60,9 +60,9 @@ const fillFriends = (data) => {
     link.classList.add('friends__list-link');
     link.setAttribute('href', `pages.html?id=${item}`)
 
-    const img = document.createElement('img');
+    const img = document.createElement('div');
     img.classList.add('link-img');
-    img.setAttribute('src', `./images/${item}.png`);
+    img.style.backgroundImage = `url(./images/${item}.png)`;
 
     link.appendChild(img);
     listItem.appendChild(link);
@@ -81,9 +81,9 @@ const fillInterests = (data) => {
       const listItem = document.createElement('li');
       listItem.className = 'interests__list-item';
       
-      const img = document.createElement('img');
+      const img = document.createElement('div');
       img.className = 'link-img';
-      img.src = interest.img;
+      img.style.backgroundImage = `url(${interest.img})`;
       
       const name = document.createElement('p');
       name.className = 'profiles__link-text';
