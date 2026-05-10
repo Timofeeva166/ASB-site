@@ -559,12 +559,6 @@ body:has(.resume[open]) {
   }
 }
 
-@media (width < 820px) {
-  .header__title {
-    display: none;
-  }
-}
-
 @media (width < 1024px) {
   .dollar {
     display: none;
@@ -572,6 +566,12 @@ body:has(.resume[open]) {
 
   .resume {
     block-size: 97dvh;
+  }
+}
+
+@media (width < 820px) {
+  .header__title {
+    display: none;
   }
 }
 

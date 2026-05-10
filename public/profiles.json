@@ -40,7 +40,7 @@
           "sex": "женский",
           "position": "Финансовый аналитик",
           "birthdate": "19 ноября",
-          "status": "Статус Лорен"
+          "status": "Очень длинные текст статуса для проверки как влезет длинный текст в интерфейс"
         },
         "avatar": "./images/loren.png",
         "aboutMe": [
@@ -125,6 +125,13 @@
             "img": "./images/elen-int6.png"
           }
         ]
+      },
+      "main": {
+        "id": "main",
+        "mainInfo": {
+          "name": "Aurum Santum Bank Ask"
+        },
+        "avatar": "./images/main.png"
       }
     }
   }

@@ -19,7 +19,7 @@
     <header class="header">
       <div class="header__logo-container">
         <a class="header__logo-link" href="https://vk.com/askbank" target="_blank">
-          <img src="./images/logo1.jpg" class="logo-img">
+          <img src="./images/main.png" class="logo-img">
         </a>
         <h2 class="header__title">
           Aurum Sanctum Bank OC & Fandom
@@ -48,7 +48,7 @@
           <img class="avatar-img" src="">
         </div>
         <div class="about-me-container own-profile-container">
-          <h2 class="about-me__title">
+          <h2 class="about-me__title own-profile-container-title">
             Обо мне
           </h2>
           <div class="divider"></div>
@@ -58,7 +58,7 @@
           </div>
         </div>
         <div class="friends-container own-profile-container">
-                  <h2 class="friends-container__title">
+                  <h2 class="friends-container__title own-profile-container-title">
                     Друзья
                   </h2>
                   <div class="divider"></div>
@@ -71,10 +71,12 @@
 
       <section class="middle-side">
           <div class="main-info-container own-profile-container">
-            <h1 class="main-info__name">
-            </h1>
-            <ul class="main-info__list">
-            </ul>
+            <div class="main-info-name-container">
+              <h1 class="main-info__name">
+              </h1>
+              <ul class="main-info__list">
+              </ul>
+            </div>
             <div class="more-info">
               <input class="checkbox" type="checkbox" id="more-info">
               <label class="more-info-head" for="more-info">
@@ -98,7 +100,7 @@
               </label>
               <div class="more-info-body">
                 <div class="interests-container own-profile-container">
-                  <h2 class="interests-container__title">
+                  <h2 class="interests-container__title own-profile-container-title">
                     Интересы
                   </h2>
                   <div class="divider"></div>
@@ -115,7 +117,6 @@
 
           <div class="divider"></div>
           <div class="posts-container own-profile-container">
-          <div class="favourites-container posts-inner-container">
             <div class="utils-container">
               <div class="sorting-container">
                 <p class=>Сортировка:</p>
@@ -143,7 +144,7 @@
                 </div>
               </div>
               <button class="filter-button">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" width="24px" height="24px">
+                <svg class="filter-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" width="24px" height="24px">
                   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 4.6c0-.56 0-.84.109-1.054a1 1 0 0 1 .437-.437C3.76 3 4.04 3 4.6 3h14.8c.56 0 .84 0 1.054.109a1 1 0 0 1 .437.437C21 3.76 21 4.04 21 4.6v1.737c0 .245 0 .367-.028.482a1 1 0 0 1-.12.29c-.061.1-.148.187-.32.36l-6.063 6.062c-.173.173-.26.26-.322.36a1 1 0 0 0-.12.29c-.027.115-.027.237-.027.482V17l-4 4v-6.337c0-.245 0-.367-.028-.482a1 1 0 0 0-.12-.29c-.061-.1-.148-.187-.32-.36L3.468 7.47c-.173-.173-.26-.26-.322-.36a1 1 0 0 1-.12-.29C3 6.704 3 6.582 3 6.337z"/>
                 </svg>
                 Фильтровать</button>
@@ -195,11 +196,11 @@
                   </div>
                 </div>
                 <div class="filter-container author-filter-container">
-                  <label class="filter-label" for="author">
+                  <label class="filter-label" for="authorRu">
                     Автор
                   </label>
                   <div class="input-container">
-                    <input type="select" class="filter-input input" name="author" id="author" placeholder="Введите значение">
+                    <input type="select" class="filter-input input" name="authorRu" id="authorRu" placeholder="Введите значение">
                     <svg xmlns="http://www.w3.org/2000/svg" class="remove-icon" width="24" height="24" viewBox="0 0 24 24">
                       <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z" fill="currentColor"/>
                     </svg>
@@ -218,13 +219,11 @@
             <ul class="posts-list">       
             </ul>
           </div>
-
-          </div>
         </div>
       </section>
       <section class="profiles">
         <h2 class="profiles__title">
-          Другие интересные страницы
+          другие интересные страницы
         </h2>
         <div class="profiles__container">
           <ul class="profiles__list">   

@@ -11,10 +11,61 @@ export const sortingContainer = document.querySelector('.sorting__svgs');
 const radios = document.querySelectorAll('.radio');
 const questionIcon = document.querySelector('.question');
 const tooltip = document.querySelector('.tooltip');
-export const arrowDown = document.querySelector('.arrow-down');
 
 let isPopoverOpen = false;
 let isTooltipShown = false;
+
+// Текущее состояние постов для сортировки
+let currentFilteredPosts = null;
+
+// Парсинг даты
+const parseDate = (dateStr) => {
+  const [day, month, year] = dateStr.split('.');
+  return new Date(year, month - 1, day);
+};
+
+// Функция сортировки постов
+export const sortPosts = (posts, sortOrder = 'down') => {
+  if (!posts || !posts.length) return [];
+  
+  const sorted = [...posts];
+  
+  if (sortOrder === 'down') {
+    // Новые сверху (убывание)
+    return sorted.sort((a, b) => parseDate(b.date) - parseDate(a.date));
+  } else {
+    // Старые сверху (возрастание)
+    return sorted.sort((a, b) => parseDate(a.date) - parseDate(b.date));
+  }
+};
+
+// Получить текущий порядок сортировки
+export const getCurrentSortOrder = () => {
+  const activeRadio = document.querySelector('.radio.active');
+  if (activeRadio) return activeRadio.value;
+  
+  const checkedRadio = document.querySelector('input[name="sort"]:checked');
+  return checkedRadio ? checkedRadio.value : 'down';
+};
+
+// Установить текущее состояние постов
+export const setCurrentPostsState = (posts) => {
+  currentFilteredPosts = posts;
+};
+
+// Получить текущее состояние постов
+export const getCurrentPostsState = () => {
+  return { posts: currentFilteredPosts};
+};
+
+// Применить сортировку к текущим постам
+export const applySorting = () => {
+  if (!currentFilteredPosts || !currentFilteredPosts.length) return;
+  
+  const sortOrder = getCurrentSortOrder();
+  const sortedPosts = sortPosts(currentFilteredPosts, sortOrder);
+  renderPosts(sortedPosts);
+};
 
 // ПРИБИВАЕТ ПОПОВЕР К КНОПКЕ И ОБНОВЛЯЕТ ЕГО ПОЗИЦИЮ
 const updatePosition = () => {
@@ -30,11 +81,10 @@ const updateTooltipPosition = () => {
   if (!questionIcon || !tooltip) return;
   
   const iconRect = questionIcon.getBoundingClientRect();
-  
   const parentRect = popover.getBoundingClientRect();
-  tooltip.style.left = `${iconRect.left - parentRect.left + 20}px`;
-  tooltip.style.bottom = `${parentRect.bottom - iconRect.top + 5}px`
-}
+  tooltip.style.left = `${iconRect.left - parentRect.left}px`;
+  tooltip.style.bottom = `${parentRect.bottom - iconRect.top + 5}px`;
+};
 
 // ПОКАЗЫВАЕТ И СКРЫВАЕТ ПОПОВЕР
 const togglePopover = (e) => {
@@ -56,20 +106,13 @@ const togglePopover = (e) => {
       tooltip.style.display = 'none';
     }
   }
-}
+};
 
 //ПЕРЕКЛЮЧЕНИЕ СОРТИРОВКИ
 export const toggleRadioClass = (e) => {
   const radio = e.target;
 
-  radios.forEach((rad) => {
-    if (rad.checked) {
-      rad.classList.add('active');
-    }
-  })
-
   if (radio.classList.contains('radio')) {
-    const radios = document.querySelectorAll('.radio');
     if (radio.checked) {
       radio.classList.add('active');
     }
@@ -77,10 +120,13 @@ export const toggleRadioClass = (e) => {
       if (rad !== radio) {
         rad.classList.remove('active');
       }
-    })
+    });
   }
-}
+  
+  applySorting();
+};
 
+//ПОКАЗАТЬ ПОДСКАЗКУ
 const showTooltip = (e) => {
   e.stopPropagation();
 
@@ -94,10 +140,10 @@ const showTooltip = (e) => {
     tooltip.style.display = 'none';
     isTooltipShown = false;
   }
-}
+};
 
 //ЛОГИКА ФИЛЬТРАЦИИ
-export const filterPosts = (postsData, profileData) => {
+export const filterPosts = (postsData) => {
   submitBtn.addEventListener('click', (e) => {
     e.preventDefault();
 
@@ -117,7 +163,7 @@ export const filterPosts = (postsData, profileData) => {
     Object.entries(formData).forEach(([key, value]) => {
       if (!value || value.trim() === '') {
         return;
-      };
+      }
 
       const searchValue = value.trim().toLowerCase(); //искомое значение из formData
 
@@ -126,7 +172,7 @@ export const filterPosts = (postsData, profileData) => {
 
         if (postValue === undefined || postValue === null) return false;
 
-        if(Array.isArray(postValue)) { //для массивов
+        if (Array.isArray(postValue)) { //для массивов
           return postValue.some(item => String(item).toLowerCase().includes(searchValue));
         }
 
@@ -145,8 +191,15 @@ export const filterPosts = (postsData, profileData) => {
           <h2 class="title">По вашему запросу ничего не найдено</h2>
         </div>
       `;
+      currentFilteredPosts = [];
     } else {
-      renderPosts(filteredPosts, profileData);
+      // Сохраняем отфильтрованные посты
+      currentFilteredPosts = filteredPosts;
+      
+      // Применяем текущую сортировку
+      const sortOrder = getCurrentSortOrder();
+      const sortedPosts = sortPosts(filteredPosts, sortOrder);
+      renderPosts(sortedPosts);
     }
 
     if (popover && tooltip) {
@@ -155,26 +208,9 @@ export const filterPosts = (postsData, profileData) => {
       filterBtn.classList.remove('filter-active');
       tooltip.style.display = 'none';
       isTooltipShown = false;
-    };
+    }
   });
 };
-
-const parseDate = (dateStr) => {
-  const [day, month, year] = dateStr.split('.');
-  return new Date(year, month - 1, day);
-};
-
-export const sortPosts = (filteredPosts) => {
-  let sortedPosts = [];
-
-  if (arrowDown.closest('label').querySelector('.radio').classList.contains('active')) {
-    sortedPosts = [...filteredPosts].sort((a, b) => parseDate(a.date) - parseDate(b.date));
-  } else {
-    sortedPosts = [...filteredPosts].sort((a, b) => parseDate(b.date) - parseDate(a.date));
-  }
-  console.log('sort!');
-  return sortedPosts;
-}
 
 // НАВЕШИВАЕМ ОБРАБОТЧИКИ БЕЗ ДАННЫХ
 export const setupEventListeners = () => {
@@ -182,7 +218,7 @@ export const setupEventListeners = () => {
   //ПОДКЛЮЧАЕМ СКРЫТИЕ-РАСКРЫТИЕ ПОПОВЕРА
   if(filterBtn) {
     filterBtn.addEventListener('click', togglePopover);
-  };
+  }
 
   //ПОДКЛЮЧАЕМ ОЧИСТКУ ПОЛЯ ПО КРЕСТУ
   if(form) {
@@ -199,7 +235,7 @@ export const setupEventListeners = () => {
         }
       }
     })
-  };
+  }
 
   // ПОДКЛЮЧАЕМ РАСКРЫТИЕ "УЗНАТЬ БОЛЬШЕ"
   if(checkbox) {
@@ -210,8 +246,7 @@ export const setupEventListeners = () => {
   if(sortingContainer) {
     sortingContainer.addEventListener('change', (e) => {
       toggleRadioClass(e);
-      console.log('change');
-  });
+    });
   }
 
   if(questionIcon) {
@@ -238,4 +273,4 @@ export const setupEventListeners = () => {
       }
     }
   });
-}
+};

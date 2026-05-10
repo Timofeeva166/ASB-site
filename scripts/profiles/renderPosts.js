@@ -1,7 +1,72 @@
-import { createKeyValuePair } from "./keyValueFabric.js";
+//приближенные фотки
+const lightbox = {
+  imagesLinks: [],
+  currentPhotoIndex: 0,
+  
+  open(imagesLinks, photoToClickIndex) {
+    this.imagesLinks = imagesLinks; //список ссылок на фотки конкретного контейнера
+    this.currentPhotoIndex = photoToClickIndex; //текущее отображаемое фото, по которому кликнули
+    
+    // Создаем лайтбокс
+    const modal = document.createElement('div');
+    modal.className = 'lightbox-modal';
+    modal.innerHTML = `
+      <div class="lightbox-overlay"></div>
+      <div class="lightbox-content">
+        <button class="lightbox-close">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24">
+            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z" fill="currentColor"/>
+          </svg>
+        </button>
+        <button class="lightbox-prev">‹</button>
+        <img class="lightbox-img" src="${imagesLinks[photoToClickIndex]}">
+        <button class="lightbox-next">›</button>
+        <div class="lightbox-counter">${photoToClickIndex + 1} / ${imagesLinks.length}</div>
+      </div>
+    `;
+    
+    document.body.appendChild(modal);
+    document.body.style.overflow = 'hidden';
+    
+    const imgElement = modal.querySelector('.lightbox-img');
+    const prevBtn = modal.querySelector('.lightbox-prev');
+    const nextBtn = modal.querySelector('.lightbox-next');
+    const counter = modal.querySelector('.lightbox-counter');
+    
+    const updateImage = () => {
+      imgElement.src = this.imagesLinks[this.currentPhotoIndex];
+      counter.textContent = `${this.currentPhotoIndex + 1} / ${this.imagesLinks.length}`; //обновить счетчик
+      prevBtn.style.opacity = this.currentPhotoIndex === 0 ? '0.3' : '1';
+      nextBtn.style.opacity = this.currentPhotoIndex === this.imagesLinks.length - 1 ? '0.3' : '1';
+    };
+    
+    const close = () => {
+      modal.remove();
+      document.body.style.overflow = '';
+    };
+    
+    // Обработчик
+    modal.querySelector('.lightbox-close').addEventListener('click', close);
+    
+    //клики по кнопкам перемещения
+    prevBtn.addEventListener('click', () => {
+      if (this.currentPhotoIndex > 0) {
+        this.currentPhotoIndex--;
+        updateImage();
+      }
+    });
+    
+    nextBtn.addEventListener('click', () => {
+      if (this.currentPhotoIndex < this.imagesLinks.length - 1) {
+        this.currentPhotoIndex++;
+        updateImage();
+      }
+    });
+  }
+};
 
 //создать автора
-const createAuthor = (data, profileData) => {
+const createAuthor = (data) => {
   const authorContainer = document.createElement('div');
   authorContainer.classList.add('author-container');
 
@@ -11,7 +76,7 @@ const createAuthor = (data, profileData) => {
 
   const authorName = document.createElement('span');
   authorName.classList.add('author-name');
-  authorName.textContent = profileData.characters[`${data.author}`].mainInfo.name;
+  authorName.textContent = data.authorRu;
 
   authorContainer.append(authorAvatar, authorName);
   return authorContainer;
@@ -25,20 +90,33 @@ const createPostText = (data) => {
   postText.classList.add('post-text');
   postText.textContent = data.text;
 
+  postText.innerHTML = data.text.replace(/\n/g, '<br>');
+
   return postText;
 }
 
-// создать картинки
+// создать картинки (с лайтбоксом)
 const createPostImages = (data) => {
-  if (!data.images) return;
+  if (!data.images || data.images.length === 0) return;
 
   const postImagesContainer = document.createElement('div');
   postImagesContainer.classList.add('post-images-container');
-  data.images.forEach((image) => {
+  
+  
+  data.images.forEach((image, index) => {
+    //создать элемент фотки
     const postImage = document.createElement('img');
     postImage.classList.add('post-img');
     postImage.src = image;
-
+    postImage.loading = 'lazy';
+    
+    // Добавляем обработчик клика
+    postImage.addEventListener('click', (e) => {
+      e.stopPropagation();
+      lightbox.open(data.images, index);
+    });
+    
+    //добавить фотку в контейнер
     postImagesContainer.appendChild(postImage);
   });
 
@@ -70,7 +148,7 @@ const createPostDate = (data) => {
   return postDate;
 }
 
-export const renderPosts = (postsData, profileData) => {
+export const renderPosts = (postsData) => {
   const list = document.querySelector('.posts-list');
   list.innerHTML = '';
 
@@ -79,7 +157,7 @@ export const renderPosts = (postsData, profileData) => {
     listItem.classList.add('posts-list-item');
 
     listItem.append(
-      createAuthor(item, profileData),
+      createAuthor(item),
       createPostText(item),
       createPostImages(item),
       createPostTags(item),
@@ -87,5 +165,5 @@ export const renderPosts = (postsData, profileData) => {
     );
 
     list.appendChild(listItem);
-  })
+  });
 }

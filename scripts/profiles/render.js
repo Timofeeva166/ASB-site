@@ -1,4 +1,5 @@
 import { createKeyValuePair } from "./keyValueFabric.js";
+import { main } from "./profiles.js";
 
 //заполняет основную информацию
 const fillMainInfo = (data) => {
@@ -72,30 +73,65 @@ const fillFriends = (data) => {
 
 //заполняет интересы
 const fillInterests = (data) => {
-    const list = document.querySelector('.interests__list');
-    if (!list) return;
+  const list = document.querySelector('.interests__list');
+  if (!list) return;
     
-    list.innerHTML = '';
+  list.innerHTML = '';
     
-    data.interests?.forEach(interest => {
-      const listItem = document.createElement('li');
-      listItem.className = 'interests__list-item';
+  data.interests?.forEach(interest => {
+    const listItem = document.createElement('li');
+    listItem.className = 'interests__list-item';
       
-      const img = document.createElement('div');
-      img.className = 'link-img';
-      img.style.backgroundImage = `url(${interest.img})`;
+    const img = document.createElement('div');
+    img.className = 'link-img';
+    img.style.backgroundImage = `url(${interest.img})`;
       
-      const name = document.createElement('p');
-      name.className = 'profiles__link-text';
-      name.textContent = interest.name;
+    const name = document.createElement('p');
+    name.className = 'profiles__link-text';
+    name.textContent = interest.name;
       
-      listItem.append(img, name);
-      list.appendChild(listItem);
-    });
-  };
+    listItem.append(img, name);
+    list.appendChild(listItem);
+  });
+};
+
+export const adaptive = () => {
+  const middle = document.querySelector('.middle-side');
+
+  if (window.innerWidth < 907) {
+    const profiles = document.querySelector('.profiles');
+    const profilesCopy = profiles.cloneNode(true);
+
+    console.log(profilesCopy);
+
+    profiles.remove();
+    middle.insertBefore(profilesCopy, middle.children[2]);
+  }
+
+  if (window.innerWidth < 600) {
+    const avatarContainer = document.querySelector('.avatar-container')
+    const avatarContainerCopy = avatarContainer.cloneNode(true);
+    avatarContainer.remove();
+    document.querySelector('.main-info-name-container').prepend(avatarContainerCopy);
+
+    const aboutMeContainer = document.querySelector('.about-me-container');
+    const aboutMeContainerCopy = aboutMeContainer.cloneNode(true);
+
+    const friendsContainer = document.querySelector('.friends-container');
+    const friendsContainerCopy = friendsContainer.cloneNode(true);
+
+    const moreInfo = document.querySelector('.more-info-body');
+    aboutMeContainer.remove();
+    friendsContainer.remove();
+
+    moreInfo.prepend(aboutMeContainerCopy, friendsContainerCopy);
+  }
+}
 
 export const renderProfile = (data, id) => {
   if (!data || !id ) return;
+
+  adaptive();
 
   data = data.characters[`${id}`];
   setAvatarImg(data);
@@ -103,4 +139,14 @@ export const renderProfile = (data, id) => {
   fillAboutMe(data);
   fillFriends(data);
   fillInterests(data);
+
+  console.log('rend!');
+  console.log(innerWidth);
+
+  if (id === 'main') {
+    document.querySelector('.about-me-container').remove();
+    document.querySelector('.friends-container').remove();
+    document.querySelector('.more-info').remove();
+    document.querySelector('.main-info__list').remove();
+  }
 }

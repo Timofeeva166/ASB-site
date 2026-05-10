@@ -6,9 +6,17 @@ import { renderProfile } from "./render.js";
 import { showError, toggleLoader } from "../blog/render.js";
 import { renderCards } from "../blog/render.js"
 import { renderPosts } from "./renderPosts.js";
-import { form, filterPosts, setupEventListeners, sortPosts, sortingContainer } from "./utils.js";
+import { 
+  form, 
+  filterPosts, 
+  setupEventListeners, 
+  sortPosts,
+  sortingContainer,
+  setCurrentPostsState,
+  getCurrentSortOrder
+} from "./utils.js";
 
-const main = document.querySelector('.main');
+export const main = document.querySelector('.main');
 const list = document.querySelector('.posts-list');
 const allPagesList = document.querySelector('.profiles__list');
 
@@ -38,8 +46,8 @@ const validateData = (profileData, id) => {
 }
 
 //проверяет есть ли посты
-const handlePosts = (postsData, profileData) => {
-  if (!postsData || postsData.length === 0) {
+const handlePosts = (postsData) => {
+  if (!postsData || postsData.posts?.length === 0) {
     if(list) {
       list.innerHTML = `
         <div class="${classes.errorState}">
@@ -47,11 +55,20 @@ const handlePosts = (postsData, profileData) => {
         </div>
       `;
     }
-
-    return;
+    return false;
   }
 
-  renderPosts(sortPosts(postsData.posts), profileData);
+  // Получаем текущий порядок сортировки
+  const sortOrder = getCurrentSortOrder();
+  
+  // Сортируем посты
+  const sortedPosts = sortPosts(postsData.posts, sortOrder);
+  
+  // Сохраняем состояние для дальнейшей сортировки/фильтрации
+  setCurrentPostsState(sortedPosts);
+  
+  // Рендерим
+  renderPosts(sortedPosts);
   return true;
 }
 
@@ -72,30 +89,26 @@ const initProfile = async () => {
     const id = getCurrentCharacterId();
     const profileData = rawProfileData.data;
     const allPagesData = rawAllPagesData.data['all-pages'];
-    let postsData = rawPostsData.data.characters?.[`${id}`];
-    let filteredPosts = [];
+    const postsData = rawPostsData.data.characters?.[`${id}`];
 
     //ВАЛИДИРУЕМ
     if (!validateData(profileData, id)) return;
 
-    //РЕНДЕРИМ ОСНОВНУЮ ИНФОРМАЦИЮ
-    renderProfile(profileData, id);
-
     //РЕНДЕРИМ КАРТОЧКИ ДРУГИХ ПЕРСОНАЖЕЙ
     if (allPagesList && allPagesData) {
+      console.log(allPagesList);
       renderCards(allPagesList, allPagesData.filter(item => item.id !== id));
     }
 
-    //РЕНДЕРИМ ПОСТЫ
-    handlePosts(postsData, profileData);
+    //РЕНДЕРИМ ОСНОВНУЮ ИНФОРМАЦИЮ
+    renderProfile(profileData, id);
+
+    //РЕНДЕРИМ ПОСТЫ (с учетом сортировки)
+    handlePosts(postsData);
 
     //НАВЕШИВАЕМ ОБРАБОТЧИК ФИЛЬТРА
     if (form) {
-      filterPosts(postsData, profileData);
-    }
-
-    if (sortingContainer) {
-      
+      filterPosts(postsData);
     }
 
   } catch(error) {
