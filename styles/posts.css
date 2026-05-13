@@ -1,7 +1,7 @@
 .main {
   display: grid;
   grid-template-columns: min-content 1fr min-content;
-  padding: 20px 30px;
+  padding: 20px;
 }
 
 /* СТИЛИ БЛОКОВ ДРУГИХ ПРОФИЛЕЙ */
@@ -88,7 +88,7 @@
   flex-direction: column;
   gap: 30px;
   block-size: fit-content;
-  inline-size: clamp(8.125rem, 6.5845rem + 6.5728vw, 12.5rem);
+  inline-size: clamp(8.125rem, 6.4745rem + 7.0423vw, 12.8125rem);
 }
 
 .middle-side {
@@ -112,6 +112,13 @@
   font-size: clamp(1.125rem, 0.993rem + 0.5634vw, 1.5rem);
 }
 
+.about-me-container,
+.friends-container,
+.interests-container {
+  background-color: var(--block-background-color);
+  padding: 10px;
+}
+
 .main-info-name-container {
   display: flex;
   flex-direction: column;
@@ -126,8 +133,8 @@
   border: 2px solid var(--text-color);
   border-radius: 50%;
   object-fit: cover;
-  block-size: clamp(8.125rem, 6.5845rem + 6.5728vw, 12.5rem);
-  inline-size: clamp(8.125rem, 6.5845rem + 6.5728vw, 12.5rem);
+  block-size: clamp(8.125rem, 6.4745rem + 7.0423vw, 12.8125rem);
+  inline-size: clamp(8.125rem, 6.4745rem + 7.0423vw, 12.8125rem);
 }
 
 .main-info__list {
@@ -195,6 +202,7 @@
 .friends__list {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .interests__list {
@@ -253,7 +261,7 @@
   gap: 25px;
   border-radius: 20px;
   padding: 20px;
-  box-shadow: 4px 4px 6px var(--accent-color);
+  box-shadow: 0px 4px 12px var(--accent-color);
   background-color: var(--popover-menu-background-color);
   inline-size: clamp(18.75rem, 9.9472rem + 37.5587vw, 43.75rem);;
 }
@@ -391,7 +399,7 @@
 }
 
 .btn-submit:hover {
-  background-color: #ac8917;
+  background-color: var(--accent-color);
 }
 
 .btn-reset:hover {
@@ -422,7 +430,7 @@
 .more-info-head {
   display: flex;
   gap: 10px;
-  color: var(--subsection-title-bacground-color);
+  color: var(--button-color);
   font-size: clamp(0.9375rem, 0.8715rem + 0.2817vw, 1.125rem);
   transition: color 0.4s ease;
   cursor: pointer;
@@ -858,6 +866,10 @@ p, button, input {
   .main-info__list {
     display: flex;
     flex-direction: column;
+  }
+
+  .status {
+    align-self: start;
   }
 }
 

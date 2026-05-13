@@ -28,6 +28,14 @@
       <nav class="header__navigation">
         <ul class="header__navigation-list-others">
           <li class="header__navigation-list-item">
+            <a class="header__navigation-list-link icon-sections" href="blog.html">
+              <svg class="sidebar-icon" width="35" height="35" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use href="./svg/icons.svg#pages"></use>
+              </svg>
+              <span class="sidebar-icon-text">блог</span>
+            </a>
+          </li>
+          <li class="header__navigation-list-item">
             <a class="header__navigation-list-link icon-sections" href="index.html">
               <svg class="sidebar-icon" width="35" height="35" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M3 10L12 3L21 10L21 20H15V14H9V20H3V10Z" 
@@ -38,6 +46,16 @@
               </svg>
               <span class="sidebar-icon-text">главная</span>
             </a>
+          </li>
+          <li class="header__navigation-list-item">
+            <div class="icon-sections">
+              <svg class="icon-else sidebar-icon" class="icon-else" width="35" height="35" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 6H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M4 12H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M4 18H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+              <span class="sidebar-icon-text">еще</span>
+            </div>
           </li>
         </ul>
       </nav>
@@ -58,17 +76,16 @@
           </div>
         </div>
         <div class="friends-container own-profile-container">
-                  <h2 class="friends-container__title own-profile-container-title">
-                    Друзья
-                  </h2>
-                  <div class="divider"></div>
-                  <div class="friends__body">
-                    <ul class="friends__list">
-                    </ul>
-                  </div>
-                </div>
+          <h2 class="friends-container__title own-profile-container-title">
+            Друзья
+          </h2>
+          <div class="divider"></div>
+          <div class="friends__body">
+          <ul class="friends__list">
+          </ul>
+          </div>
+        </div>
       </section>
-
       <section class="middle-side">
           <div class="main-info-container own-profile-container">
             <div class="main-info-name-container">
@@ -112,9 +129,6 @@
               </div>
             </div>
           </div>
-
-
-
           <div class="divider"></div>
           <div class="posts-container own-profile-container">
             <div class="utils-container">
@@ -254,22 +268,6 @@
     </a>
 
       <!-- ШАБЛОНЫ -->
-      <!-- ШАБЛОН ПОПОВЕРА С НАВИГАЦИЕЙ -->
-    <template id="template__navigation-icons">
-      <div class="navigation-icons__container">
-        <ul class="navigation-icons__list">
-          <li class="navigation-icons__list-item">
-          </li>
-          <li class="navigation-icons__list-item">
-          </li>
-          <li class="navigation-icons__list-item">
-          </li>
-          <li class="navigation-icons__list-item">
-          </li>
-        </ul>
-      </div>
-    </template>
-
     <!-- ШАБЛОН СПИСКА ДРУГИХ ПРОФИЛЕЙ -->
     <template id="template__profiles-container">
       <div class="profiles__container">
@@ -334,6 +332,23 @@
           <ul class="interests__list">
           </ul>
         </div>
+      </div>
+    </template>
+
+    <template id="template__navigation-icons">
+      <div class="navigation-icons__container">
+        <ul class="navigation-icons__list">
+          <li class="navigation-icons__list-item">
+          </li>
+          <li class="navigation-icons__list-item">
+          </li>
+          <li class="navigation-icons__list-item">
+          </li>
+          <li class="navigation-icons__list-item">
+          </li>
+          <li class="navigation-icons__list-item">
+          </li>
+        </ul>
       </div>
     </template>
   </body>

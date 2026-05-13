@@ -11,10 +11,38 @@ import {
   filterPosts, 
   setupEventListeners, 
   sortPosts,
-  sortingContainer,
   setCurrentPostsState,
   getCurrentSortOrder
 } from "./utils.js";
+import { onClick, iconElse } from "../other-pages/popover.js";
+
+const profilesArr = [
+  {
+    iconName: 'rules',
+    iconText: 'правила',
+    href: 'rules.html'
+  },
+  {
+    iconName: 'template',
+    iconText: 'шаблон резюме',
+    href: './files/resume.docx'
+  },
+  {
+    iconName: 'staff',
+    iconText: 'штат',
+    href: 'staff.html'
+  },
+  {
+    iconName: 'partners',
+    iconText: 'партнерство',
+    href: 'partners.html'
+  },
+  {
+    iconName: 'benefits',
+    iconText: 'премиум-услуги',
+    href: 'benefits.html'
+  }
+];
 
 export const main = document.querySelector('.main');
 const list = document.querySelector('.posts-list');
@@ -123,3 +151,4 @@ const initProfile = async () => {
 loadThemeWithoutButtons();
 initProfile();
 setupEventListeners();
+iconElse?.addEventListener('click', (e) => onClick(e, profilesArr));

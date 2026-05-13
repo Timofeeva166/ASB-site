@@ -1,5 +1,4 @@
 import { createKeyValuePair } from "./keyValueFabric.js";
-import { main } from "./profiles.js";
 
 //заполняет основную информацию
 const fillMainInfo = (data) => {

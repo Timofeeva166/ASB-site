@@ -1,2 +1,2 @@
-import { loadThemeWithoutButtons } from "./theme.js";
+import { loadThemeWithoutButtons } from "./other-pages/theme.js";
 loadThemeWithoutButtons();

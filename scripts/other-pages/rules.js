@@ -4,6 +4,11 @@ import { onClick, iconElse } from "./popover.js";
 import { loadThemeWithoutButtons } from "./theme.js";
 
 const rulesArr = [
+    {
+    iconName: 'pages',
+    iconText: 'блог',
+    href: 'blog.html'
+  },
   {
     iconName: 'template',
     iconText: 'шаблон резюме',

@@ -1,6 +1,5 @@
 import { classes } from "../blog/config.js";
 import { renderPosts } from "./renderPosts.js";
-import { toggleCheckboxClass } from "../other-pages/staff.js";
 
 const filterBtn = document.querySelector('.filter-button');
 const popover = document.querySelector('.settings-container');
@@ -14,6 +13,15 @@ const tooltip = document.querySelector('.tooltip');
 
 let isPopoverOpen = false;
 let isTooltipShown = false;
+
+function toggleCheckboxClass(event) {
+  const checkbox = event.target;
+  if (checkbox.checked) {
+    checkbox.classList.add('checked');
+  } else {
+    checkbox.classList.remove('checked');
+  }
+};
 
 // Текущее состояние постов для сортировки
 let currentFilteredPosts = null;

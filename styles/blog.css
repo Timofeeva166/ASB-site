@@ -13,9 +13,43 @@
   inline-size: 100%;
 }
 
-/*пока мало карточек*/
-@media (width > 660px) {
-  .staff__card-list {
-    grid-template-columns: repeat(auto-fit, 250px);
-  }
+.staff__image-container {
+  border-radius: 5px;
+  overflow: hidden;
+  block-size: 100%;
+  inline-size: 100%;
+}
+
+.card-img {
+  object-fit: scale-down;
+  object-position: center;
+  block-size: 100%;
+  inline-size: 100%;
+  aspect-ratio: 1 / 1;
+  scale: 1.2;
+}
+
+.error-state {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin: auto;
+}
+
+.error-state .title {
+  text-align: center;
+  font-size: clamp(1.5rem, 1.3239rem + 0.7512vw, 2rem);
+}
+
+.btn {
+  border: none;
+  border-radius: 5px;
+  padding: 4px 15px;
+  color: var(--title-color);
+  background-color: var(--button-color);
+  transition: background-color 0.4s ease;
+  cursor: pointer;
+  inline-size: fit-content;
 }

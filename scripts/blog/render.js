@@ -58,6 +58,7 @@ export const renderCards = (container, characters) => {
 //показать ошибку
 export const showError = (retryCallback) => {
 
+  main.style.display = 'flex';
   main.innerHTML = `
     <div class="${classes.errorState}">
       <h2 class="title">⚠️ Ошибка загрузки данных</h2>
