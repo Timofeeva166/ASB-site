@@ -174,8 +174,11 @@
   block-size: fit-content;
 }
 
-.status {
+.main-info__parameter-value {
   font-size: clamp(0.75rem, 0.662rem + 0.3756vw, 1rem);
+}
+
+.status {
   align-self: center;
   text-wrap: wrap;
 }
@@ -840,7 +843,7 @@ p, button, input {
   }
 }
 
-@media (width < 907px) {
+@media (width < 975px) {
   .profiles {
     position: static;
   }
@@ -858,7 +861,7 @@ p, button, input {
   }
 }
 
-@media (width < 768px) {
+@media (width < 824px) {
   .main {
     grid-template-columns: min-content 1fr;
   }

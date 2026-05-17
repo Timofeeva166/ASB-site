@@ -1,4 +1,5 @@
 import { createKeyValuePair } from "./keyValueFabric.js";
+import { main } from "./profiles.js";
 
 //заполняет основную информацию
 const fillMainInfo = (data) => {
@@ -97,13 +98,12 @@ const fillInterests = (data) => {
 export const adaptive = () => {
   const middle = document.querySelector('.middle-side');
 
-  if (window.innerWidth < 907) {
+  if (window.innerWidth < 975) {
     const profiles = document.querySelector('.profiles');
     const profilesCopy = profiles.cloneNode(true);
 
-    console.log(profilesCopy);
-
     profiles.remove();
+    main.style.gridTemplateColumns = 'min-content 1fr';
     middle.insertBefore(profilesCopy, middle.children[2]);
   }
 

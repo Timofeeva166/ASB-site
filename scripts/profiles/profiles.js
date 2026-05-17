@@ -124,7 +124,6 @@ const initProfile = async () => {
 
     //РЕНДЕРИМ КАРТОЧКИ ДРУГИХ ПЕРСОНАЖЕЙ
     if (allPagesList && allPagesData) {
-      console.log(allPagesList);
       renderCards(allPagesList, allPagesData.filter(item => item.id !== id));
     }
 
