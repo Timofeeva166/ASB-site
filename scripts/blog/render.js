@@ -4,26 +4,26 @@ const main = document.querySelector(`.${classes.main}`);
 
 //создать карточку конкретному персонажу
 //TODO: переделать через клонирование шаблона
-const createCardForCharacter = (character) => {
+export const createCardForCharacter = (character) => {
   const listItem = document.createElement('li');
-  listItem.classList.add(classes.staffListItem);
+  listItem.classList.add('staff__card-list-item');
+  listItem.setAttribute('data-modal', `modal-${character.id}`);
   listItem.dataset.id = character.id;
 
   const article = document.createElement('article');
-  article.classList.add(classes.staffCard);
-
+  article.classList.add('staff__card');
+  
   const img = document.createElement('img');
-  img.classList.add(classes.cardImg);
-  img.src = character.img;
-  img.alt = character.name;
-
+  img.classList.add('card-img');
+  img.src = `./images/${character.id}.png`;
+  
   const name = document.createElement('p');
-  name.classList.add(classes.cardText);
+  name.classList.add('card-text');
   name.textContent = character.name;
-
+  
   article.append(img, name);
   listItem.append(article);
-
+  
   return listItem;
 }
 
