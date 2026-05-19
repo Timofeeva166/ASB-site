@@ -183,97 +183,14 @@
           Наш персонал
         </h2>
         <ul class="staff__card-list">
-          <li class="staff__card-list-item" data-modal="modal-agnia">
-            <article class="staff__card">
-              <img class="card-img" src="./images/agnia.png">
-              <p class="card-text">
-                Агния Мерна
-              </p>
-            </article>
-          </li>
-          <li class="staff__card-list-item" data-modal="modal-altinai">
-            <article class="staff__card">
-              <img class="card-img" src="./images/altinai.png">
-              <p class="card-text">
-                Алтынай Жанысов
-              </p>
-            </article>
-          </li>
-          <li class="staff__card-list-item" data-modal="modal-aros">
-            <article class="staff__card">
-              <img class="card-img" src="./images/aros.png">
-              <p class="card-text">
-                Арос Свифт
-              </p>
-            </article>
-          </li>
-          <li class="staff__card-list-item" data-modal="modal-villiam">
-            <article class="staff__card">
-              <img class="card-img" src="./images/villiam.png">
-              <p class="card-text">
-                Виллиам Николз
-              </p>
-            </article>
-          </li>
-          <li class="staff__card-list-item" data-modal="modal-galina">
-            <article class="staff__card">
-              <img class="card-img" src="./images/galina.png">
-              <p class="card-text">
-                Галина Рьяных
-              </p>
-            </article>
-          </li>
-          <li class="staff__card-list-item" data-modal="modal-kairen">
-            <article class="staff__card">
-              <img class="card-img" src="./images/kai.png">
-              <p class="card-text">
-                Кайрен Фортин
-              </p>
-            </article>
-          </li>
-          <li class="staff__card-list-item" data-modal="modal-chris">
-            <article class="staff__card">
-              <img class="card-img" src="./images/chris.png">
-              <p class="card-text">
-                Кристофер Хопкинс
-              </p>
-            </article>
-          </li>
-          <li class="staff__card-list-item" data-modal="modal-loren">
-            <article class="staff__card">
-              <img class="card-img" src="./images/loren.png">
-              <p class="card-text">
-                Лорен Наполи
-              </p>
-            </article>
-          </li>
-          <li class="staff__card-list-item" data-modal="modal-maria">
-            <article class="staff__card">
-              <img class="card-img" src="./images/maria.png">
-              <p class="card-text">
-                Мария Ташик-Остроумова
-              </p>
-            </article>
-          </li>
-          <li class="staff__card-list-item" data-modal="modal-bleid">
-            <article class="staff__card">
-              <img class="card-img" src="./images/bleid.png">
-              <p class="card-text">
-                Мортенакс Блэйд
-              </p>
-            </article>
-          </li>
-          <li class="staff__card-list-item" data-modal="modal-elen">
-            <article class="staff__card">
-              <img class="card-img" src="./images/elen.png">
-              <p class="card-text">
-                Элен Мур
-              </p>
-            </article>
-          </li>
         </ul>
       </section>
     </main>
+    <div class="loader">
+      <p class="loader__text">
+        Загрузка...
+      </p>
+    </div>
     <footer class="footer">
       <div class="footer__partners-container">
         <div class="footer__partners">
@@ -637,7 +554,7 @@
       </div>
     </dialog>
     <dialog id="modal-kairen" class="resume">
-      <img class="resume__img" src="./images/kai.png">
+      <img class="resume__img" src="./images/kairen.png">
       <div class="resume__data-container">
         <p class="resume__name">Кайрен Фортин</p>
         <p class="resume__position">Разработчик программного обеспечения</p>
@@ -1012,6 +929,154 @@
             <br>Во время обучения была успешно пройдена рабочая практика в банке (6 месяцев)
             <br>В ходе работы не закрываю глаза на нарушения ради сохранения отношений, придерживаюсь профессионального скептицизма, документирую все действия, отчётливо объясняю руководству все риски, если они имеются
             <br>В свободное от работы время занимаюсь выращиванием комнатных растений, коллекционированием и реставрацией старых фотографий, учусь играть на музыкальных инструментах и веду личный дневник, куда делаю короткие зарисовки ситуаций с работы, забавные диалоги, наблюдения, чувства и эмоции после рабочего дня.</p>
+        </div>
+      </div>
+      <div class="close-icon" id="close-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z" fill="currentColor"/>
+        </svg>
+      </div>
+    </dialog>
+    <dialog id="modal-kira" class="resume">
+      <img class="resume__img" src="./images/kira.png">
+      <div class="resume__data-container">
+        <p class="resume__name">Кира Шилова</p>
+        <p class="resume__position">Программист</p>
+        <a class="resume__topic-link link-accent" href="https://vk.com/topic-230008469_63010783" target="_blank">Задать вопрос</a>
+        <a class="resume__album-link link-accent" href="https://vk.com/album-230008469_311402038" target="_blank">Альбом</a>
+      </div>
+      <h3 class="resume__title">Резюме</h3>
+      <div class="resume__container">
+        <div class="resume__item">
+          <h4 class="resume__item-title">name</h4>
+          <p class="resume__item-text">Кира Шилова</p>
+        </div>
+        <div class="resume__item">
+          <h4 class="resume__item-title">race</h4>
+          <p class="resume__item-text">Человек</p>
+        </div>
+        <div class="resume__item">
+          <h4 class="resume__item-title">sex</h4>
+          <p class="resume__item-text">Женский</p>
+        </div>
+        <div class="resume__item">
+          <h4 class="resume__item-title">age / birthdate</h4>
+          <p class="resume__item-text">27 лет / 02.02</p>
+        </div>
+        <div class="resume__item">
+          <h4 class="resume__item-title">nationality</h4>
+          <p class="resume__item-text">Русская</p>
+        </div>
+        <div class="resume__item">
+          <h4 class="resume__item-title">position</h4>
+          <p class="resume__item-text">Программист</p>
+        </div>
+        <div class="resume__item">
+          <h4 class="resume__item-title">soft skills</h4>
+          <p class="resume__item-text">Умение искать и анализировать информацию
+            <br>Коммуникабельность
+            <br>Ориентация на реальные потребности</p>
+        </div>
+        <div class="resume__item">
+          <h4 class="resume__item-title">hard skills</h4>
+          <p class="resume__item-text">
+            Знание языков программирования: Python, Java, C++
+            <br>Навыки разработки мобильных приложений
+            <br>Работа с базами данных.
+          </p>
+        </div>
+        <div class="resume__item">
+          <h4 class="resume__item-title">about me</h4>
+          <p class="resume__item-text">
+            Кому шутку про 1с? Есть еле добитая вышка по данной специальности. 4 года опыта работы в других компаниях (Яндекс, Тинькофф). Почему так резко сменила место жительства? Честно, трудно сказать, может все просто достало. Буду создавать тут свою "American Dream"…
+          </p>
+        </div>
+      </div>
+      <div class="close-icon" id="close-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z" fill="currentColor"/>
+        </svg>
+      </div>
+    </dialog>
+    <dialog id="modal-leona" class="resume">
+      <img class="resume__img" src="./images/leona.png">
+      <div class="resume__data-container">
+        <p class="resume__name">Леона Харт</p>
+        <p class="resume__position">Методист по разработке обучающих программ</p>
+        <a class="resume__topic-link link-accent" href="https://vk.com/topic-230008469_63011288" target="_blank">Задать вопрос</a>
+        <a class="resume__album-link link-accent" href="https://vk.com/album-230008469_311402040" target="_blank">Альбом</a>
+      </div>
+      <h3 class="resume__title">Резюме</h3>
+      <div class="resume__container">
+        <div class="resume__item">
+          <h4 class="resume__item-title">name</h4>
+          <p class="resume__item-text">Леона Харт (L. Hart)
+          <br>Настоящее имя: Эвтана</p>
+        </div>
+        <div class="resume__item">
+          <h4 class="resume__item-title">race</h4>
+          <p class="resume__item-text">Ангел неудачи (Atropheli) — существо, притягивающее неудачи к себе и трансформирующее их в удачу для окружающих.</p>
+        </div>
+        <div class="resume__item">
+          <h4 class="resume__item-title">sex</h4>
+          <p class="resume__item-text">Женский</p>
+        </div>
+        <div class="resume__item">
+          <h4 class="resume__item-title">age / birthdate</h4>
+          <p class="resume__item-text">2370+ лет / 12 августа 348 г. до н. э.</p>
+        </div>
+        <div class="resume__item">
+          <h4 class="resume__item-title">nationality</h4>
+          <p class="resume__item-text">Британка (по документам)</p>
+        </div>
+        <div class="resume__item">
+          <h4 class="resume__item-title">position</h4>
+          <p class="resume__item-text">Методист по разработке обучающих программ</p>
+        </div>
+        <div class="resume__item">
+          <h4 class="resume__item-title">soft skills</h4>
+          <p class="resume__item-text">Эмоциональный интеллект
+            <br>Коммуникация и наставничество
+            <br>Стрессоустойчивость и адаптация
+            <br>Креативность и импровизация
+            <br>Саморефлексия и мудрость</p>
+        </div>
+        <div class="resume__item">
+          <h4 class="resume__item-title">hard skills</h4>
+          <p class="resume__item-text">
+            Составление учебных планов и программ
+            <br>Координация тренингов и семинаров
+            <br>Тестирование новых образовательных программ
+            <br>Сбор обратной связи от участников обучения
+          </p>
+        </div>
+        <div class="resume__item">
+          <h4 class="resume__item-title">about me</h4>
+          <p class="resume__item-text">
+            Родилась в Древней Греции (Афины);
+            <br>Веками скиталась, сталкиваясь с предубеждением и страхом из‑за своей природы;
+            <br>В 1920‑х годах приняла новое имя (Леона Харт) и осела в Англии;
+            <br>Устроилась на работу в библиотеку, позже — в учебный центр;
+            <br>Сознательно выбрала профессию, где дар помогает другим расти, несмотря на личные неудачи.
+            <br>
+            <br>Обо мне в профессиональном:
+            <br>
+            <br>1. Сертификат по педагогическому дизайну и разработке онлайн‑курсов (2018)
+            <br>Учебный центр профессионального развития (London Professional Development Centre)
+            <br>Курсы: «Проектирование учебных программ», «Современные образовательные технологии», «Оценка эффективности обучения»
+            <br>
+            <br>2. Неофициальное обучение в Британской библиотеке (1840–1850‑е годы)
+            <br>Специализация: античная литература, классическая филология, история образования
+            <br>Самостоятельное изучение педагогики Яна Амоса Коменского и Иоганна Гербарта
+            <br>
+            <br>3. Обучение в монастырской школе при аббатстве Сен‑Дени (Франция, XII век)
+            <br>Дисциплины: латынь, риторика, основы логики, каллиграфия
+            <br>Практика: копирование и реставрация манускриптов
+            <br>
+            <br>4. Образование в Афинах (IV век до н. э.)
+            <br>Изучение философии, риторики, этики у последователей Платона
+            <br>Основы педагогики и наставничества
+          </p>
         </div>
       </div>
       <div class="close-icon" id="close-icon">

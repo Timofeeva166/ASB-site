@@ -1,4 +1,7 @@
 /** СКРИПТЫ ДЛЯ ГЛАВНОЙ СТРАНИЦЫ **/
+import { fetchData } from "../api.js";
+import { renderCards, toggleLoader } from "../blog/render.js";
+import { urls } from "../blog/config.js";
 import { onClick, iconElse } from "../popover.js";
 import { loadTheme, toggleTheme, themeContainer } from "../theme.js";
 
@@ -34,25 +37,60 @@ iconElse?.addEventListener('click', (e) => onClick(e, indexArr));
 
 const cards = document.querySelectorAll('.staff__card-list-item');
 const closeButtons = document.querySelectorAll('.close-icon');
+const list = document.querySelector('.staff__card-list');
 
-cards.forEach(card => {
-  card.addEventListener('click', function() {
-    const modalId = this.dataset.modal;
-    const modal = document.getElementById(modalId);
-    if (modal) {
-      modal.showModal();
+const initCards = async () => {
+  if (!list) {
+    console.error('Контейнер для карточек не найден!');
+    return;
+  }
+
+  toggleLoader('on');
+
+  try {
+    const rawData = await fetchData(urls.characters);
+    const data = rawData.data['characters'];
+    renderCards(list, data)
+  } catch(error) {
+    console.error('Ошибка инициализации:', error);
+    showError(list, () => initCards());
+  } finally {
+    toggleLoader('off');
+  }
+}
+
+const setupEventListeners = () => {
+  document.addEventListener('click', (e) => {
+    const card = e.target.closest('.staff__card-list-item');
+    
+    if (!card) return;
+
+    const id = card.dataset.modal;
+    if (!id) return;
+
+    const dialog = document.getElementById(id);
+    if (dialog) {
+      dialog.showModal();
     }
   });
-});
 
-closeButtons.forEach(btn => {
-  btn.addEventListener('click', function() {
-    const modal = this.closest('dialog');
-    if (modal) {
-      modal.close();
+  document.addEventListener('click', (e) => {
+    const closeIcon = e.target.closest('.close-icon');
+
+    if (!closeIcon) return;
+
+    const dialog = closeIcon.closest('dialog');
+    if (dialog) {
+      dialog.close();
     }
-  });
-});
+  })
+}
+
+const init = async () => {
+  await initCards();
+  setupEventListeners();
+}
 
 loadTheme();
+init();
 themeContainer.addEventListener('click', toggleTheme);

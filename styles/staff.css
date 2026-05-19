@@ -72,7 +72,7 @@
 .departament__body-card-list {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 40px;
 }
 
 .departament__body-card-list-item {
