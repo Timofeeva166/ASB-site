@@ -1,6 +1,6 @@
 export const urls = {
   allPages: '/ASB-site/public/all-pages.json',
-  characters: 'ASB-site/public/characters.json'
+  characters: '/ASB-site/public/characters.json'
 }
 
 export const classes = {
