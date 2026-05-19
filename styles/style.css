@@ -129,15 +129,21 @@
 }
 
 .sidebar {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
   grid-column: 1;
   grid-row: 2 / 4;
   border-radius: 5px;
   padding: 20px 10px;
   background-color: var(--block-background-color);
   inline-size: 100px;
+}
+
+.sidebar-sticky {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  block-size: fit-content;
+  position: sticky;
+  top: 20px;
 }
 
 .soon {
@@ -614,9 +620,13 @@ body:has(.resume[open]) {
   .sidebar {
     inline-size: 100%;
     padding: 20px;
+  }
+
+  .sidebar-sticky {
     display: grid;
     grid-template-columns: 2fr min-content 1fr;
     grid-template-rows: min-content 1fr;
+    position: static;
   }
 
   .soon {
