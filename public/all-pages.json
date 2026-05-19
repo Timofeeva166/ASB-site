@@ -5,17 +5,12 @@
       {
         "id": "aros",
         "name": "Арос Свифт",
-        "img": "./images/aros.png"
+        "img": "./images/aaaros.png"
       },
       {
         "id": "kairen",
         "name": "Кайрен Фортин",
-        "img": "./images/kairen.png"
-      },
-      {
-        "id": "loren",
-        "name": "Лорен Наполи",
-        "img": "./images/loren.png"
+        "img": "./images/kai-avatar.png"
       },
       {
         "id": "elen",

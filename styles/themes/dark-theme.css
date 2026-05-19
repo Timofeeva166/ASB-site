@@ -1,0 +1,30 @@
+:root.dark-theme {
+  --header-gradient: linear-gradient(
+    to bottom,
+    #ff7e5e 0%,
+    #ffb07c 50%,
+    #ffe4b5 100%
+  );
+  
+  --background-image: repeating-linear-gradient(
+    45deg,
+    #4a2a3e 0px,
+    #4a2a3e 1px,
+    #6b3a4e 1px,
+    #6b3a4e 3px
+  );
+  
+  --main-background-color: #3a2030;
+  --block-background-color: rgba(58, 35, 48, 0.88);
+  --staff-card-color: #c46a6a;
+  --text-color: #f0e0c0;
+  --button-color: #ff9e6a;
+  --dollar-color: #4a2a30;
+  --accent-color: #ffc48a;
+  --card-background-color: #2a2030;
+  --title-color: #ffe0b5;
+  --popover-menu-background-color: #2a1520;
+  --modal-background-color: #3a2535;
+  --button-theme-hover-color: rgba(255, 158, 106, 0.8);
+  --subsection-title-background-color: #c47a6a;
+}

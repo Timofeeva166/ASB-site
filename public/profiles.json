@@ -11,7 +11,7 @@
           "birthdate": "1 января",
           "status": "Статус Ароса"
         },
-        "avatar": "./images/aros.png",
+        "avatar": "./images/aaaros.png",
         "aboutMe": [
           "Люблю программировать на Python",
           "Занимаюсь спортом 3 раза в неделю",
@@ -69,7 +69,7 @@
           "birthdate": "15 марта",
           "status": "Статус Кайрена"
         },
-        "avatar": "./images/kairen.png",
+        "avatar": "./images/kai-avatar.png",
         "aboutMe": [
           "фанат реакта",
           "библиотеки",
