@@ -60,4 +60,16 @@
     <path d="M4 18H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
   </symbol>
 
+  <symbol id="faq" viewbox="0 0 35 35">
+    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
+    <text x="12" y="16" text-anchor="middle" font-size="12" fill="currentColor" font-weight="bold">?</text>
+  </symbol>
+
+  <symbol id="department-arrow" viewbox="0 0 35 35">
+  <path d="M12 5V19M12 19L5 12M12 19L19 12" 
+    stroke="currentColor" 
+    stroke-width="2" 
+    stroke-linecap="round" 
+    stroke-linejoin="round"/>
+  </symbol>
 </svg>

@@ -1,6 +1,6 @@
 /** СКРИПТЫ ДЛЯ ГЛАВНОЙ СТРАНИЦЫ **/
 import { fetchData } from "../api.js";
-import { renderCards, toggleLoader } from "../blog/render.js";
+import { renderCards, toggleLoader, showError } from "../blog/render.js";
 import { urls } from "../blog/config.js";
 import { onClick, iconElse } from "../popover.js";
 import { loadTheme, toggleTheme, themeContainer } from "../theme.js";

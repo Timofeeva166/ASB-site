@@ -61,6 +61,9 @@ export const showError = (container, retryCallback) => {
     </div>
   `;
 
+  main.style.display = 'flex';
+  main.style.justifyContent = 'center';
+
   const retryButton = document.querySelector(`.${classes.retryButton}`);
   if (retryButton && retryCallback) {
     retryButton.addEventListener('click', retryCallback);
