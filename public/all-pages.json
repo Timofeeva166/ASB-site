@@ -3,19 +3,19 @@
   "data" : {
     "all-pages" : [
       {
-        "id": "aros",
-        "name": "Арос Свифт",
-        "img": "./images/aaaros.png"
-      },
-      {
-        "id": "kairen",
-        "name": "Кайрен Фортин",
-        "img": "./images/kai-avatar.png"
-      },
-      {
         "id": "elen",
         "name": "Элен Мур",
         "img": "./images/len-avatar.png"
+      },
+      {
+        "id": "bleid",
+        "name": "Мортенакс Блэйд",
+        "img": "./images/blade.png"
+      },
+      {
+        "id": "villiam",
+        "name": "Виллиам Николз",
+        "img": "./images/villiam.png"
       }
     ]
   }
