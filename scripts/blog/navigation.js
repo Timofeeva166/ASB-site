@@ -1,7 +1,7 @@
 // перейти на страницу перса
 export const goTocharacterPage = (characterId) => {
   if (!characterId) return;
-  window.location.href = `pages.html?id=${characterId}`
+  window.location.href = `profile.html?id=${characterId}`
 }
 
 //взять айдишник перса

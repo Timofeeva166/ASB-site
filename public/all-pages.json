@@ -2,6 +2,21 @@
   "success": true,
   "data" : {
     "all-pages" : [
+      {
+        "id": "elen",
+        "name": "Элен Мур",
+        "img": "./images/len-avatar.png"
+      },
+      {
+        "id": "bleid",
+        "name": "Мортенакс Блэйд",
+        "img": "./images/blade.png"
+      },
+      {
+        "id": "villiam",
+        "name": "Виллиам Николз",
+        "img": "./images/villiam.png"
+      }
     ]
   }
 }
