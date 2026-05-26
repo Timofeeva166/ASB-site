@@ -3,19 +3,16 @@
   "data" : {
     "all-pages" : [
       {
-        "id": "elen",
-        "name": "Элен Мур",
-        "img": "./images/len-avatar.png"
+        "id": "elen-blog",
+        "name": "Элен Мур"
       },
       {
-        "id": "bleid",
-        "name": "Мортенакс Блэйд",
-        "img": "./images/blade.png"
+        "id": "bleid-blog",
+        "name": "Мортенакс Блэйд"
       },
       {
-        "id": "villiam",
-        "name": "Виллиам Николз",
-        "img": "./images/villiam.png"
+        "id": "villiam-blog",
+        "name": "Виллиам Николз"
       }
     ]
   }

@@ -16,11 +16,13 @@ export const createCardForCharacter = (character) => {
   listItem.setAttribute('data-modal', `modal-${character.id}`);
   listItem.dataset.id = character.id;
 
-  const article = document.createElement('article');
+  const link = document.createElement('a');
   if (window.location.href.toString().includes('profile')) {
-    article.classList.add('all-pages-card');
+    link.classList.add('all-pages-card');
+    link.href = `profile.html?id=${character.id}`;
   } else {
-    article.classList.add('staff__card');
+    link.classList.add('staff__card');
+    link.href = '#0';
   }
   
   const img = document.createElement('img');
@@ -35,8 +37,8 @@ export const createCardForCharacter = (character) => {
   name.classList.add('card-text');
   name.textContent = character.name;
   
-  article.append(img, name);
-  listItem.append(article);
+  link.append(img, name);
+  listItem.append(link);
   
   return listItem;
 }
