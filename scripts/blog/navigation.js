@@ -4,7 +4,7 @@ export const goTocharacterPage = (characterId) => {
   window.location.href = `profile.html?id=${characterId}`
 }
 
-//взять айдишник перса
+//взять айдишник перса из урла
 export const getCurrentCharacterId = () => {
   const params = new URLSearchParams(window.location.search);
   return params.get('id');

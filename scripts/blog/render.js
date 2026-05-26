@@ -51,9 +51,7 @@ export const renderCards = (container, characters) => {
 }
 
 //показать ошибку
-export const showError = (container, retryCallback) => {
-  if (!container) return;
-
+export const showError = (retryCallback) => {
   main.innerHTML = `
     <div class="${classes.errorState}">
       <h2 class="title">⚠️ Ошибка загрузки данных</h2>
@@ -73,7 +71,6 @@ export const showError = (container, retryCallback) => {
 //показать лоадер
 export const toggleLoader = (action) => {
   const loader = document.querySelector(`.${classes.loader}`);
-  console.log(action);
 
   if (action === 'on') {
     loader.style.display = 'flex';
@@ -88,7 +85,6 @@ export const changeStylesForCards = () => {
 
   if (window.innerWidth > 768) {
     const cards = document.querySelectorAll('.staff__card-list-item');
-    console.log(cards.length);
     if (cards.length < 5) {
       list.style.gridTemplateColumns = 'repeat(auto-fit, 250px)';
     } else {

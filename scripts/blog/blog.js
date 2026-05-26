@@ -3,6 +3,35 @@ import { fetchData } from "../api.js";
 import { classes, urls} from "./config.js";
 import { goTocharacterPage } from "./navigation.js";
 import { renderCards, showError, toggleLoader, changeStylesForCards } from "./render.js";
+import { onClick, iconElse } from "../popover.js";
+
+const profilesArr = [
+  {
+    iconName: 'rules',
+    iconText: 'правила',
+    href: 'rules.html'
+  },
+  {
+    iconName: 'template',
+    iconText: 'шаблон резюме',
+    href: './files/resume.docx'
+  },
+  {
+    iconName: 'staff',
+    iconText: 'штат',
+    href: 'staff.html'
+  },
+  {
+    iconName: 'partners',
+    iconText: 'партнерство',
+    href: 'partners.html'
+  },
+  {
+    iconName: 'benefits',
+    iconText: 'премиум-услуги',
+    href: 'benefits.html'
+  }
+];
 
 const list = document.querySelector(`.${classes.staffList}`);
 //клик по карточке
@@ -35,7 +64,7 @@ const initBlog = async () => {
     setupClickHandler();
   } catch (error) {
     console.error('Ошибка инициализации:', error);
-    showError(list, () => initBlog());
+    showError(() => initBlog());
   } finally {
     toggleLoader('off');
   }
@@ -50,3 +79,4 @@ const init = async () => {
 loadThemeWithoutButtons(); //загружаем тему
 init(); //загружаем страницу
 window.addEventListener('resize', changeStylesForCards); //резайзим
+iconElse?.addEventListener('click', (e) => onClick(e, profilesArr));
