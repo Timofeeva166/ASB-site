@@ -1,8 +1,8 @@
 export const urls = {
-  allPages: '/ASB-site/public/all-pages.json',
-  characters: '/ASB-site/public/characters.json',
-  profiles: '/ASB-site/public/profiles.json',
-  posts: '/ASB-site/public/posts.json'
+  allPages: '/public/all-pages.json',
+  characters: '/public/characters.json',
+  profiles: '/public/profiles.json',
+  posts: '/public/posts.json'
 }
 
 export const classes = {

@@ -2,7 +2,7 @@
   "success": true,
   "data": {
     "characters": {
-      "elen": {
+      "elen-blog": {
         "id": "elen",
         "mainInfo": {
           "name": "Элен Мур",
@@ -11,7 +11,7 @@
           "birthdate": "8 января",
           "status": "«Каждый несет в себе Тень, и чем меньше она воплощена в сознательной жизни индивида, тем она чернее и плотнее. Если Тень осознается, она становится источником жизненной силы, но если она отрицается, она превращается в разрушительного демона». К. Г. Юнг"
         },
-        "avatar": "./images/len-avatar.png",
+        "avatar": "./images/elen-blog.png",
         "aboutMe": [
           "Люблю дождь",
           "Немного ночная сова",
@@ -42,6 +42,74 @@
           {
             "name": "Ночные прогулки (фотографии)",
             "img": "./images/elen-int6.png"
+          }
+        ]
+      },
+      "bleid-blog": {
+        "id": "bleid",
+        "mainInfo": {
+          "name": "Мортенакс Блэйд",
+          "sex": "мужской",
+          "position": "охранник",
+          "birthdate": "2 июня",
+          "status": "Лишь утратив все до конца, мы обретаем свободу."
+        },
+        "avatar": "./images/bleid-blog.png",
+        "aboutMe": [
+          "Не беспокоить."
+        ],
+        "friends": [],
+        "interests": [
+          {
+            "name": "Автолюбитель (автомобили)",
+            "img": "./images/bleid-int1.png"
+          },
+          {
+            "name": "Скалолазание (экстрим)",
+            "img": "./images/bleid-int2.png"
+          },
+          {
+            "name": "Похорони меня за плинтусом (эстетика)",
+            "img": "./images/bleid-int3.png"
+          },
+          {
+            "name": "Зоозащита ЛА (волонтерский клуб)",
+            "img": "./images/bleid-int4.png"
+          },
+          {
+            "name": "Рецепты от и для души (кулинария)",
+            "img": "./images/bleid-int5.png"
+          }
+        ]
+      },
+      "villiam-blog": {
+        "id": "villiam",
+        "mainInfo": {
+          "name": "Виллиам Николз",
+          "sex": "мужской",
+          "position": "Специалист по трансфертному ценообразованию",
+          "birthdate": "1 октября",
+          "status": "На работе"
+        },
+        "avatar": "./images/villiam-blog.png",
+        "aboutMe": [
+          "Люблю выходные",
+          "Знакомства по интересам приветствуются",
+          "Не приветствуются вопросы личного характера"
+        ],
+        "friends": ["aros", "loren"],
+        "interests": [
+          {
+            "name": "Netflix",
+            "img": "./images/villiam-int1.png"
+          },
+          {
+            "name": "A24",
+            "img": "./images/villiam-int2.png"
+          },
+          {
+            "name": "Кухня Мясоеда",
+            "img": "./images/villiam-int3.png"
           }
         ]
       }

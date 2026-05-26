@@ -104,11 +104,10 @@ const createPostText = (data) => {
 
 // создать картинки (с лайтбоксом)
 const createPostImages = (data) => {
-  if (!data.images || data.images.length === 0) return;
+  if (data.images || !data.images.length === 0) {
 
   const postImagesContainer = document.createElement('div');
   postImagesContainer.classList.add('post-images-container');
-  
   
   data.images.forEach((image, index) => {
     //создать элемент фотки
@@ -128,6 +127,7 @@ const createPostImages = (data) => {
   });
 
   return postImagesContainer;
+  }
 }
 
 //создать теги
@@ -166,7 +166,7 @@ export const renderPosts = (postsData) => {
     listItem.append(
       createAuthor(item),
       createPostText(item),
-      createPostImages(item),
+      (createPostImages(item)),
       createPostTags(item),
       createPostDate(item)
     );

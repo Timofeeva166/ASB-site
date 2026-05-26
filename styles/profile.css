@@ -178,7 +178,8 @@
   font-size: clamp(0.75rem, 0.662rem + 0.3756vw, 1rem);
 }
 
-.status {
+.status,
+.position {
   align-self: center;
   text-wrap: wrap;
 }
@@ -859,7 +860,8 @@ p, button, input {
     flex-direction: column;
   }
 
-  .status {
+  .status,
+  .position {
     align-self: start;
   }
 }

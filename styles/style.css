@@ -584,6 +584,7 @@ body:has(.resume[open]) {
   background-color: var(--button-color);
   cursor: pointer;
   inline-size: fit-content;
+  transition: background-color 0.4s ease;
 }
 
 @media (width < 1240px) {
