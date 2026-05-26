@@ -1,8 +1,8 @@
 import { fetchData } from "../api.js";
 import { urls, classes } from "../blog/config.js";
-import { loadThemeWithoutButtons } from "../other-pages/theme.js";
+import { loadThemeWithoutButtons } from "../theme.js";
 import { getCurrentCharacterId } from "../blog/navigation.js";
-import { renderProfile } from "./render.js";
+import { renderProfile } from "./renderInfo.js";
 import { showError, toggleLoader } from "../blog/render.js";
 import { renderCards } from "../blog/render.js"
 import { renderPosts } from "./renderPosts.js";
@@ -14,7 +14,7 @@ import {
   setCurrentPostsState,
   getCurrentSortOrder
 } from "./utils.js";
-import { onClick, iconElse } from "../other-pages/popover.js";
+import { onClick, iconElse } from "../popover.js";
 
 const profilesArr = [
   {

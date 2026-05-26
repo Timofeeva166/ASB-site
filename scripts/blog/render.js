@@ -6,15 +6,29 @@ const main = document.querySelector(`.${classes.main}`);
 //TODO: переделать через клонирование шаблона
 export const createCardForCharacter = (character) => {
   const listItem = document.createElement('li');
-  listItem.classList.add('staff__card-list-item');
+
+  if (window.location.href.toString().includes('profile')) {
+    listItem.classList.add('all-pages-list-item');
+  } else {
+    listItem.classList.add('staff__card-list-item');
+  }
+
   listItem.setAttribute('data-modal', `modal-${character.id}`);
   listItem.dataset.id = character.id;
 
   const article = document.createElement('article');
-  article.classList.add('staff__card');
+  if (window.location.href.toString().includes('profile')) {
+    article.classList.add('all-pages-card');
+  } else {
+    article.classList.add('staff__card');
+  }
   
   const img = document.createElement('img');
-  img.classList.add('card-img');
+  if (window.location.href.toString().includes('profile')) {
+    img.classList.add('link-img');
+  } else {
+    img.classList.add('card-img');
+  }
   img.src = `./images/${character.id}.png`;
   
   const name = document.createElement('p');

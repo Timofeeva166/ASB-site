@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Профили сотрудников</title>
+    <link rel="stylesheet" href="./fonts/fonts.css" />
+    <link rel="stylesheet" href="./styles/themes/dark-theme.css" />
+    <link rel="stylesheet" href="./styles/themes/pink-theme.css" />
+    <link rel="stylesheet" href="./styles/themes/may-theme.css" />
+    <link rel="stylesheet" href="./styles/themes/light-theme.css" />
+    <link rel="stylesheet" href="./styles/globals.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/profile.css" />
+    <link rel="stylesheet" href="./styles/animations.css" />
+    <link rel="icon" href="./images/logo.ico" sizes="any">
+    <script type="module" src="./scripts/profiles/profiles.js" defer></script>
+  </head>
+  <body class="content">
+    <header class="header">
+      <div class="header__logo-container">
+        <a class="header__logo-link" href="https://vk.com/askbank" target="_blank">
+          <img src="./images/logo1.jpg" class="logo-img">
+        </a>
+        <h2 class="header__title">
+          Aurum Sanctum Bank OC & Fandom
+        </h2>
+      </div> 
+      <nav class="header__navigation">
+        <ul class="header__navigation-list-others">
+          <li class="header__navigation-list-item">
+            <a class="header__navigation-list-link icon-sections" href="blog.html">
+              <svg class="sidebar-icon" width="35" height="35" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use href="./svg/icons.svg#pages"></use>
+              </svg>
+              <span class="sidebar-icon-text">блог</span>
+            </a>
+          </li>
+          <li class="header__navigation-list-item">
+            <a class="header__navigation-list-link icon-sections" href="index.html">
+              <svg class="sidebar-icon" width="35" height="35" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 10L12 3L21 10L21 20H15V14H9V20H3V10Z" 
+                  stroke="currentColor" 
+                  stroke-width="1.5" 
+                  stroke-linecap="round" 
+                  stroke-linejoin="round"/>
+              </svg>
+              <span class="sidebar-icon-text">главная</span>
+            </a>
+          </li>
+          <li class="header__navigation-list-item">
+            <div class="icon-sections">
+              <svg class="icon-else sidebar-icon" class="icon-else" width="35" height="35" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 6H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M4 12H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M4 18H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+              <span class="sidebar-icon-text">еще</span>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <section class="left-side">
+        <div class="avatar-container">
+          <img class="avatar-img" src="">
+        </div>
+        <div class="about-me-container own-profile-container">
+          <h2 class="about-me__title own-profile-container-title">
+            Обо мне
+          </h2>
+          <div class="divider"></div>
+          <div class="about-me__body">
+            <ul class="about-me__list">
+            </ul>
+          </div>
+        </div>
+        <div class="friends-container own-profile-container">
+          <h2 class="friends-container__title own-profile-container-title">
+            Друзья
+          </h2>
+          <div class="divider"></div>
+          <div class="friends__body">
+          <ul class="friends__list">
+          </ul>
+          </div>
+        </div>
+      </section>
+      <section class="middle-side">
+          <div class="main-info-container own-profile-container">
+            <div class="main-info-name-container">
+              <h1 class="main-info__name">
+              </h1>
+              <ul class="main-info__list">
+              </ul>
+            </div>
+            <div class="more-info">
+              <input class="checkbox" type="checkbox" id="more-info">
+              <label class="more-info-head" for="more-info">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px">
+                  <defs>
+                    <style>.cls-2{fill:currentColor}
+                    </style>
+                  </defs>
+                  <title>info</title>
+                  <g id="Layer_2" data-name="Layer 2">
+                    <g id="info">
+                      <g id="info-2" data-name="info">
+                        <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2m0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8" class="cls-2"/>
+                        <circle cx="12" cy="8" r="1" class="cls-2"/>
+                        <path d="M12 10a1 1 0 0 0-1 1v5a1 1 0 0 0 2 0v-5a1 1 0 0 0-1-1" class="cls-2"/>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+                Узнать больше
+              </label>
+              <div class="more-info-body">
+                <div class="interests-container own-profile-container">
+                  <h2 class="interests-container__title own-profile-container-title">
+                    Интересы
+                  </h2>
+                  <div class="divider"></div>
+                  <div class="interests__body">
+                    <ul class="interests__list">
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="posts-container own-profile-container">
+            <div class="utils-container">
+              <div class="sorting-container">
+                <p class=>Сортировка:</p>
+                <div class="sorting__svgs">
+                  <label class="sorting-label sorting-label-down">
+                    <input type="radio" name="sort" value="down" class="radio active" checked>
+                    <svg class="arrow-sorting arrow-down" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 5V19M12 19L5 12M12 19L19 12" 
+                        stroke="currentColor" 
+                        stroke-width="2" 
+                        stroke-linecap="round" 
+                        stroke-linejoin="round"/>
+                    </svg>
+                  </label>
+                  <label class="sorting-label sorting-label-up">
+                    <input type="radio" name="sort" value="up" class="radio">
+                    <svg class="arrow-sorting arrow-up" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 5V19M12 19L5 12M12 19L19 12" 
+                        stroke="currentColor" 
+                        stroke-width="2" 
+                        stroke-linecap="round" 
+                        stroke-linejoin="round"/>
+                    </svg>
+                  </label>
+                </div>
+              </div>
+              <button class="filter-button">
+                <svg class="filter-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" width="24px" height="24px">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 4.6c0-.56 0-.84.109-1.054a1 1 0 0 1 .437-.437C3.76 3 4.04 3 4.6 3h14.8c.56 0 .84 0 1.054.109a1 1 0 0 1 .437.437C21 3.76 21 4.04 21 4.6v1.737c0 .245 0 .367-.028.482a1 1 0 0 1-.12.29c-.061.1-.148.187-.32.36l-6.063 6.062c-.173.173-.26.26-.322.36a1 1 0 0 0-.12.29c-.027.115-.027.237-.027.482V17l-4 4v-6.337c0-.245 0-.367-.028-.482a1 1 0 0 0-.12-.29c-.061-.1-.148-.187-.32-.36L3.468 7.47c-.173-.173-.26-.26-.322-.36a1 1 0 0 1-.12-.29C3 6.704 3 6.582 3 6.337z"/>
+                </svg>
+                Фильтровать</button>
+            </div>
+            <form class="settings-container">
+              <div class="settings-header-container">
+                <h2 class="posts-container__title">
+                  Фильтры
+                </h2>
+                <svg class="question" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20px" height="20px">
+                  <path fill="var(--accent-color)" d="M12 1a11 11 0 1 0 11 11A11.013 11.013 0 0 0 12 1m0 20a9 9 0 1 1 9-9 9.01 9.01 0 0 1-9 9m1-4.5v2h-2v-2Zm3-7a3.98 3.98 0 0 1-1.5 3.122A3.86 3.86 0 0 0 13.063 15h-2.032a5.81 5.81 0 0 1 2.219-3.936 2 2 0 0 0-.15-3.232 2.06 2.06 0 0 0-2-.14A1.94 1.94 0 0 0 10 9.5a1 1 0 0 1-2 0 3.91 3.91 0 0 1 2.319-3.647 4.06 4.06 0 0 1 3.889.315A4 4 0 0 1 16 9.5"/>
+                </svg>
+                <p class="tooltip">
+                  Ищут посты, соответствующие всем критериям одновременно
+                </p>
+              </div>
+              <div class="fields-container">
+                <div class="filter-container search-filter-container">
+                  <label class="filter-label" for="text">
+                    Фраза
+                  </label>
+                  <div class="input-container">
+                    <input class="filter-input input" name="text" type="text" id="text" placeholder="Введите значение">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="remove-icon" width="24" height="24" viewBox="0 0 24 24">
+                      <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z" fill="currentColor"/>
+                    </svg>
+                  </div>
+                </div>
+                <div class="filter-container date-filter-container">
+                  <label class="filter-label" for="date">
+                    Дата
+                  </label>
+                  <div class="input-container">
+                    <input type="text" class="filter-input input" name="date" id="date" placeholder="Введите значение">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="remove-icon" width="24" height="24" viewBox="0 0 24 24">
+                      <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z" fill="currentColor"/>
+                    </svg>
+                  </div>
+                </div>
+                <div class="filter-container tag-filter-container">
+                  <label class="filter-label" for="tags">
+                    Тег
+                  </label>
+                  <div class="input-container">
+                    <input type="select" class="filter-input input" name="tags" id="tags" placeholder="Введите значение">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="remove-icon" width="24" height="24" viewBox="0 0 24 24">
+                     <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z" fill="currentColor"/>
+                   </svg>
+                  </div>
+                </div>
+                <div class="filter-container author-filter-container">
+                  <label class="filter-label" for="authorRu">
+                    Автор
+                  </label>
+                  <div class="input-container">
+                    <input type="select" class="filter-input input" name="authorRu" id="authorRu" placeholder="Введите значение">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="remove-icon" width="24" height="24" viewBox="0 0 24 24">
+                      <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z" fill="currentColor"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="buttons">
+                <button class="btn-reset btn" type="reset">
+                  Сбросить
+                </button>
+                <button class="btn-submit btn" type="button">
+                  Применить
+                </button>
+              </div>
+            </form>
+            <ul class="posts-list">       
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="profiles">
+        <h2 class="profiles__title">
+          Другие интересные страницы
+        </h2>
+        <div class="profiles__container">
+          <ul class="profiles__list">   
+          </ul>
+        </div>
+      </section>
+    </main>
+    <div class="loader">
+      <p class="loader__text">
+        Загрузка...
+      </p>
+    </div>
+    <a class="arrow" href="index.html">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" height="50" width="50" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m11 5-7 7 7 7M4 12h16"/>
+      </svg>
+    </a>
+    <a class="chat" href="https://vk.me/askbank" target="_blank">
+      <svg width="35" height="35" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 4H4C2.9 4 2 4.9 2 6V16C2 17.1 2.9 18 4 18H8L12 22L16 18H20C21.1 18 22 17.1 22 16V6C22 4.9 21.1 4 20 4Z" 
+          stroke="#fff" 
+          stroke-width="1.5" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
+        <path d="M8 10H16" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M8 14H12" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+    </a>
+
+      <!-- ШАБЛОНЫ -->
+    <!-- ШАБЛОН СПИСКА ДРУГИХ ПРОФИЛЕЙ -->
+    <template id="template__profiles-container">
+      <div class="profiles__container">
+          <ul class="profiles__list">   
+          </ul>
+        </div>
+    </template>
+
+    <!-- ШАБЛОН ОСНОВНОЙ ИНФОРМАЦИИ -->
+    <template id="template__main-information">
+      <div class="main-info-container own-profile-container">
+        <h1 class="main-info__name">
+        </h1>
+        <ul class="main-info__list">
+        </ul>
+      </div>
+    </template>
+
+     <!-- ШАБЛОН АВАТАР -->
+    <template id="template__avatar">
+      <div class="avatar-container">
+        <img class="avatar-img" src="">
+      </div>
+    </template>
+
+     <!-- ШАБЛОН ОБО МНЕ -->
+    <template id="template__about-me">
+      <div class="about-me-container own-profile-container">
+        <h2 class="about-me__title">
+          Обо мне
+        </h2>
+        <div class="divider"></div>
+        <div class="about-me__body">
+          <ul class="about-me__list">
+          </ul>
+        </div>
+      </div>
+    </template>
+
+      <!-- ШАБЛОН ДРУЗЬЯ -->
+    <template id="template__friends">
+      <div class="friends-container own-profile-container">
+        <h2 class="friends-container__title">
+          Друзья
+        </h2>
+        <div class="divider"></div>
+        <div class="friends__body">
+          <ul class="friends__list">
+          </ul>
+        </div>
+      </div>
+    </template>
+
+      <!-- ШАБЛОН ИНТЕРЕСЫ -->
+    <template id="template__interests">
+      <div class="interests-container own-profile-container">
+        <h2 class="interests-container__title">
+          Интересы
+        </h2>
+        <div class="divider"></div>
+        <div class="interests__body">
+          <ul class="interests__list">
+          </ul>
+        </div>
+      </div>
+    </template>
+
+    <template id="template__navigation-icons">
+      <div class="navigation-icons__container">
+        <ul class="navigation-icons__list">
+          <li class="navigation-icons__list-item">
+          </li>
+          <li class="navigation-icons__list-item">
+          </li>
+          <li class="navigation-icons__list-item">
+          </li>
+          <li class="navigation-icons__list-item">
+          </li>
+          <li class="navigation-icons__list-item">
+          </li>
+        </ul>
+      </div>
+    </template>
+  </body>
+</html>

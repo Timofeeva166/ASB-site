@@ -59,7 +59,7 @@ const fillFriends = (data) => {
 
     const link = document.createElement('a');
     link.classList.add('friends__list-link');
-    link.setAttribute('href', `pages.html?id=${item}`)
+    link.setAttribute('href', `profile.html?id=${item}`)
 
     const img = document.createElement('div');
     img.classList.add('link-img');
