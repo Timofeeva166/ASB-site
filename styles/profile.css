@@ -20,7 +20,7 @@
   padding: 5px;
   color:var(--title-color);
   font-weight: normal;
-  font-size: clamp(0.625rem, 0.493rem + 0.5634vw, 1rem);
+  font-size: clamp(0.625rem, 0.537rem + 0.3756vw, 0.875rem);
   text-transform: uppercase;
   background-color: var(--button-color);
   inline-size: fit-content;
@@ -55,15 +55,10 @@
 .link-img {
   border-radius: 50%;
   background-repeat: no-repeat;
-  background-position: center;
   background-size: cover;
   transition: box-shadow 0.4s ease;
-  block-size: clamp(2.25rem, 1.9859rem + 1.1268vw, 3rem);
-  inline-size: clamp(2.25rem, 1.9859rem + 1.1268vw, 3rem);
-}
-
-.link-img:hover {
-  box-shadow: 0 0 10px var(--accent-color);
+  block-size: clamp(1.875rem, 1.0714rem + 2.1429vw, 3rem);
+  inline-size: clamp(1.875rem, 1.0714rem + 2.1429vw, 3rem);
 }
 
 .profiles__link-text {
@@ -86,9 +81,9 @@
   top: 15px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 15px;
   block-size: fit-content;
-  inline-size: clamp(8.125rem, 6.4745rem + 7.0423vw, 12.8125rem);
+  inline-size: clamp(8.125rem, 6.1444rem + 8.4507vw, 13.75rem);
 }
 
 .middle-side {
@@ -133,8 +128,8 @@
   border: 2px solid var(--text-color);
   border-radius: 50%;
   object-fit: cover;
-  block-size: clamp(8.125rem, 6.4745rem + 7.0423vw, 12.8125rem);
-  inline-size: clamp(8.125rem, 6.4745rem + 7.0423vw, 12.8125rem);
+  block-size: clamp(8.125rem, 6.1444rem + 8.4507vw, 13.75rem);
+  inline-size: clamp(8.125rem, 6.1444rem + 8.4507vw, 13.75rem);
 }
 
 .main-info__list {
@@ -191,7 +186,7 @@
 .about-me__list {
   display: flex;
   flex-direction: column;
-  gap: 13px;
+  gap: 7px;
 }
 
 .about-me__list-item {
@@ -203,9 +198,22 @@
   grid-row: 3;
 }
 
+.friend-container {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  inline-size: clamp(2.25rem, 1.9859rem + 1.1268vw, 3rem);
+}
+
+.friend-name {
+  font-size: 10px;
+  text-wrap: wrap;
+  text-align: center;
+}
+
 .friends__list {
   display: flex;
-  gap: 20px;
+  gap: 15px;
   flex-wrap: wrap;
 }
 
@@ -894,5 +902,10 @@ p, button, input {
   .remove-icon {
     width: 18px;
     height: 18px;
+  }
+
+  .link-img {
+    block-size: clamp(2.25rem, 1.9859rem + 1.1268vw, 3rem);
+    inline-size: clamp(2.25rem, 1.9859rem + 1.1268vw, 3rem);
   }
 }

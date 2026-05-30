@@ -53,20 +53,24 @@ const fillFriends = (data) => {
   const list = document.querySelector('.friends__list');
   if (!list) return;
 
-  data.friends?.forEach((item) => {
+  data.friends?.forEach((friend) => {
     const listItem = document.createElement('li');
     listItem.classList.add('friends__list-item');
 
-    const link = document.createElement('a');
-    link.classList.add('friends__list-link');
-    link.setAttribute('href', `profile.html?id=${item}`)
+    const friendContainer = document.createElement('div');
+    friendContainer.classList.add('friend-container');
+    friendContainer.setAttribute('href', `profile.html?id=${friend}`)
 
     const img = document.createElement('div');
     img.classList.add('link-img');
-    img.style.backgroundImage = `url(./images/${item}.png)`;
+    img.style.backgroundImage = `url(./images/${friend.id}.png)`;
 
-    link.appendChild(img);
-    listItem.appendChild(link);
+    const name = document.createElement('span');
+    name.classList.add('friend-name');
+    name.textContent = friend.name;
+
+    friendContainer.append(img, name);
+    listItem.appendChild(friendContainer);
     list.appendChild(listItem);
   })
 }
