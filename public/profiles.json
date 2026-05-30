@@ -17,7 +17,40 @@
           "Немного ночная сова",
           "Meow :3"
         ],
-        "friends": ["aros", "loren"],
+        "friends": [
+          {
+            "id": "villiam-blog",
+            "name": "Виллиам Николз"
+          },
+          {
+            "id": "onieks",
+            "name": "Ониекс Ганн"
+          },
+          {
+            "id": "loren",
+            "name": "Лорен Наполи"
+          },
+          {
+            "id": "aros",
+            "name": "Арос Свифт"
+          },
+          {
+            "id": "bleid-blog",
+            "name": "Мортенакс Блэйд"
+          },
+          {
+            "id": "kairen",
+            "name": "Кайрен Фортин"
+          },
+          {
+            "id": "yaki",
+            "name": "Кагаяки Хокаи"
+          },
+          {
+            "id": "chris",
+            "name": "Кристиан Хопкинс"
+          }
+        ],
         "interests": [
           {
             "name": "Excel и кофе (офисные мемы)",
