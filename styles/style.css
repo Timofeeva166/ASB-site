@@ -267,22 +267,6 @@
   right: 20px;
 }
 
-.may-theme .dollar {
-  display: none;
-}
-.may {
-  display: none;
-}
-
-.may-theme .may {
-  display: block;
-  position: absolute;
-  right: -30px;
-  top: -15px;
-  z-index: 1000;
-  block-size: 180px;
-}
-
 .staff {
   display: flex;
   flex-direction: column;
@@ -609,10 +593,6 @@ body:has(.resume[open]) {
 
   .resume {
     block-size: 97dvh;
-  }
-
-  .may-theme .may {
-    display: none;
   }
 }
 
