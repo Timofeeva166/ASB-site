@@ -5,6 +5,11 @@ import { loadThemeWithoutButtons } from "../theme.js";
 
 export const rulesArr = [
   {
+    iconName: 'pages',
+    iconText: 'блог',
+    href: 'blog.html'
+  },
+  {
     iconName: 'template',
     iconText: 'шаблон резюме',
     href: './files/resume.docx'

@@ -38,6 +38,20 @@
             "date": "29.05.2026",
             "author": "elen-blog",
             "authorRu": "Элен Мур"
+          },
+          {
+            "id": 2,
+            "text": "Обновила фотографию на странице",
+            "images": [
+              "./images/elen-blog.png"
+            ],
+            "type": "",
+            "tags": [
+              "Фото"
+            ],
+            "date": "28.05.2026",
+            "author": "elen-blog",
+            "authorRu": "Элен Мур"
           }
         ]
       },
