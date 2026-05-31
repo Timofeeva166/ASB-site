@@ -304,7 +304,8 @@
   object-position: top left;
   grid-row: 2;
   grid-column: 1;
-  border-radius: 5px;
+  border-radius: 20px;
+  border: 1px solid var(--text-color);
 }
 
 .anonce-container {
