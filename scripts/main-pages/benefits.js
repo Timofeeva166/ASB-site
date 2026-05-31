@@ -5,6 +5,11 @@ import { loadThemeWithoutButtons } from "../theme.js";
 
 const benefitsArr = [
   {
+    iconName: 'pages',
+    iconText: 'блог',
+    href: 'blog.html'
+  },
+  {
     iconName: 'rules',
     iconText: 'правила',
     href: 'rules.html'
