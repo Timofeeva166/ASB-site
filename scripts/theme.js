@@ -6,7 +6,7 @@ export const html = document.querySelector('html');
 export const themes = {
   'light-theme': 'светлая',
   'pink-theme': 'розовая',
-  'may-theme': 'майская',
+  'summer-theme': 'летняя',
   'dark-theme': 'темная',
 };
 
@@ -45,10 +45,14 @@ export const toggleTheme = (e) => {
 export const loadThemeWithoutButtons = () => {
   const savedTheme = localStorage.getItem('selectedTheme');
 
-  if (savedTheme) {
+  if (savedTheme && savedTheme !== 'майская') {
     const themeClass = Object.keys(themes).find(key => themes[key] === savedTheme);
     html.className = themeClass;
-  } else {
+  } else if (savedTheme && savedTheme === 'майская') {
+    html.className = 'summer-theme';
+    localStorage.setItem('selectedTheme', 'летняя');
+  }
+  else {
     html.className = 'light-theme';
   }
 };
@@ -57,13 +61,17 @@ export const loadThemeWithoutButtons = () => {
 export const loadTheme = () => {
   const savedTheme = localStorage.getItem('selectedTheme');
 
-  if (savedTheme) {
+  if (savedTheme && savedTheme !== 'майская') {
     const themeButton = Array.from(buttons).find(button => button.textContent.trim() == savedTheme);
     if (themeButton) {
       themeButton.classList.add('active');
       setTheme(themeButton);
     }
-  } else {
+  } else if (savedTheme && savedTheme === 'майская') {
+    buttons[2].classList.add('active');
+      setTheme(buttons[2]);
+  }
+  else {
     if (buttons.length > 0) {
       buttons[0].classList.add('active');
       setTheme(buttons[0]);
