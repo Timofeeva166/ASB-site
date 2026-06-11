@@ -460,7 +460,7 @@
   display: grid;
   grid-template-columns: min-content 1fr;
   grid-template-rows: min-content min-content 1fr;
-  gap: 30px;
+  gap: clamp(1.25rem, 1.0299rem + 0.939vw, 1.875rem);
   border: none;
   border-radius: 5px;
   padding: 20px;
@@ -504,8 +504,14 @@ body:has(.resume[open]) {
 }
 
 .resume__name {
-  font-size: 25px;
+  font-size: clamp(1.125rem, 0.971rem + 0.6573vw, 1.5625rem);
   text-decoration: underline;
+}
+
+.resume__position,
+.resume__topic-link,
+.resume__album-link {
+  font-size: clamp(0.875rem, 0.743rem + 0.5634vw, 1.25rem);
 }
 
 .resume__title {
@@ -631,10 +637,6 @@ body:has(.resume[open]) {
 
   .resume__data-container {
     font-size: 16px;
-  }
-
-  .resume__name {
-    font-size: 20px;
   }
 }
 
