@@ -6,56 +6,41 @@ const lightbox = {
     this.imagesLinks = imagesLinks; //список ссылок на фотки конкретного контейнера
     this.currentPhotoIndex = photoToClickIndex; //текущее отображаемое фото, по которому кликнули
     
-    // Создаем лайтбокс
-    const modal = document.createElement('div');
-    modal.className = 'lightbox-modal';
-    modal.innerHTML = `
-      <div class="lightbox-overlay"></div>
-      <div class="lightbox-content">
-        <button class="lightbox-close">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24">
-            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z" fill="currentColor"/>
-          </svg>
-        </button>
-        <button class="lightbox-prev">
-          <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M15 6L9 12L15 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-        <img class="lightbox-img" src="${imagesLinks[photoToClickIndex]}">
-        <button class="lightbox-next">
-          <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-        <div class="lightbox-counter">${photoToClickIndex + 1} / ${imagesLinks.length}</div>
-      </div>
-    `;
-    
+    const modalTemplate = document.getElementById("template__lightbox");
+    const modal = modalTemplate.content.cloneNode("true").firstElementChild;
+
     document.body.appendChild(modal);
     document.body.style.overflow = 'hidden';
+
+    const modalImg = document.querySelector('.lightbox-img');
+    modalImg.src = `${imagesLinks[photoToClickIndex]}`;
+
+    const counter = document.querySelector('.lightbox-counter');
+    counter.textContent = `${photoToClickIndex + 1} / ${imagesLinks.length}`;
+
+    const chat = document.querySelector('.chat');
+    chat.style.display = 'none';
     
-    const imgElement = modal.querySelector('.lightbox-img');
     const prevBtn = modal.querySelector('.lightbox-prev');
     const nextBtn = modal.querySelector('.lightbox-next');
-    const counter = modal.querySelector('.lightbox-counter');
     
     const updateImage = () => {
-      imgElement.src = this.imagesLinks[this.currentPhotoIndex];
+      modalImg.src = this.imagesLinks[this.currentPhotoIndex];
       counter.textContent = `${this.currentPhotoIndex + 1} / ${this.imagesLinks.length}`; //обновить счетчик
       prevBtn.style.opacity = this.currentPhotoIndex === 0 ? '0.3' : '1';
+      prevBtn.style.cursor = this.currentPhotoIndex === 0 ? 'not-allowed' : 'pointer';
       nextBtn.style.opacity = this.currentPhotoIndex === this.imagesLinks.length - 1 ? '0.3' : '1';
+      nextBtn.style.cursor = this.currentPhotoIndex === this.imagesLinks.length - 1 ? 'not-allowed' : 'pointer';
     };
     
     const close = () => {
       modal.remove();
       document.body.style.overflow = '';
+      chat.style.display = 'flex'
     };
     
-    // Обработчик
     modal.querySelector('.lightbox-close').addEventListener('click', close);
     
-    //клики по кнопкам перемещения
     prevBtn.addEventListener('click', () => {
       if (this.currentPhotoIndex > 0) {
         this.currentPhotoIndex--;
