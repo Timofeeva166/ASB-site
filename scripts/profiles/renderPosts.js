@@ -23,6 +23,16 @@ const lightbox = {
     
     const prevBtn = modal.querySelector('.lightbox-prev');
     const nextBtn = modal.querySelector('.lightbox-next');
+
+    if (this.currentPhotoIndex === 0) {
+      prevBtn.style.opacity = '0.3';
+      prevBtn.style.cursor = 'not-allowed';
+    }
+
+    if (this.currentPhotoIndex === this.imagesLinks.length - 1) {
+      nextBtn.style.opacity = '0.3';
+      nextBtn.style.cursor = 'not-allowed';
+    }
     
     const updateImage = () => {
       modalImg.src = this.imagesLinks[this.currentPhotoIndex];
