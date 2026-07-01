@@ -1,23 +1,22 @@
 :root.summer-theme {
   --header-gradient: linear-gradient(
-    to bottom,
-    rgba(255, 218, 185, 0.9) 0%,
-    rgba(255, 218, 185, 0.5) 50%,
-    rgba(221, 214, 243, 0.9) 100%
+    to right,
+    #facac7 0%,
+    #fcdbc6 50%,
+    #caf7e6 100%
   );
-  
   --background-image: url(../images/summer-background.png);
-  --main-background-color: #fff7f0;
-  --block-background-color: #ffeddb;
-  --staff-card-color: #fedcbe;
-  --text-color: #8B6B5A;
-  --button-color: #E8A87C;
-  --dollar-color: #F0D5C0;
-  --accent-color: #C38D9E;
-  --card-background-color: #FFF5EE;
+  --main-background-color: #d9f2da;
+  --block-background-color: rgba(255, 255, 255, 0.75);
+  --staff-card-color: #FFE5E0;
+  --text-color: #9B6B6B;
+  --button-color: #FF9A8B;
+  --dollar-color: #F0D4CF;
+  --accent-color: #88D4B6;
+  --card-background-color: #FFFFFF;
   --title-color: #ffffff;
-  --popover-menu-background-color: #FFF8F0;
-  --modal-background-color: #FFF5F0;
-  --button-theme-hover-color: rgba(232, 168, 124, 0.7);
-  --subsection-title-background-color: #DDBEA9;
+  --popover-menu-background-color: #FFFCF8;
+  --modal-background-color: #FFF8F5;
+  --button-theme-hover-color: rgba(255, 154, 139, 0.7);
+  --subsection-title-background-color: #C5E0D4;
 }
