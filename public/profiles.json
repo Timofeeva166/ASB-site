@@ -222,6 +222,41 @@
             "img": "./images/altinai-int6.png"
           }
         ]
+      },
+      "silas-blog": {
+        "id": "silas",
+        "mainInfo": {
+          "name": "Silasence",
+          "sex": "мужской",
+          "position": "Трейдер",
+          "birthdate": "14 октября",
+          "status": ""
+        },
+        "avatar": "./images/silas-blog.png",
+        "aboutMe": [
+          "Люблю кофе",
+          "Не против поболтать - о чем хотите?"
+        ],
+        "friends": [
+        ],
+        "interests": [
+          {
+            "name": "Dusty beats",
+            "img": "./images/silas-int1.png"
+          },
+          {
+            "name": "Autotrader",
+            "img": "./images/silas-int2.png"
+          },
+          {
+            "name": "Open Library",
+            "img": "./images/silas-int3.png"
+          },
+          {
+            "name": "London After Midnight",
+            "img": "./images/silas-int4.png"
+          }
+        ]
       }
     }
   }
