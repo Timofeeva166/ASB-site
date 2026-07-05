@@ -158,6 +158,70 @@
             "img": "./images/villiam-int3.png"
           }
         ]
+      },
+      "altinai-blog": {
+        "id": "altinai",
+        "mainInfo": {
+          "name": "Алтынай Жанысов",
+          "sex": "мужской",
+          "position": "Секретарь управляющего корпоративной политикой",
+          "birthdate": "15 ноября",
+          "status": "«Пусть блещет солнце, пусть луна взойдёт!» А. Кунанбаев"
+        },
+        "avatar": "./images/altinai-blog.png",
+        "aboutMe": [
+          "Берейтор",
+          "Гостеприимный и дружелюбный",
+          "Можете обращаться по любым вопросам!"
+        ],
+        "friends": [
+          {
+            "id": "agnia",
+            "name": "Агния Мерна"
+          },
+          {
+            "id": "aros",
+            "name": "Арос Свифт"
+          },
+          {
+            "id": "galina",
+            "name": "Галина Рьяных"
+          },
+          {
+            "id": "ren",
+            "name": "Рен Апокалипсис"
+          },
+          {
+            "id": "maria",
+            "name": "Мария Ташик-Остроумова"
+          }
+        ],
+        "interests": [
+          {
+            "name": "Самообразование",
+            "img": "./images/altinai-int1.png"
+          },
+          {
+            "name": "Вкусная еда",
+            "img": "./images/altinai-int2.png"
+          },
+          {
+            "name": "Конный клуб",
+            "img": "./images/altinai-int3.png"
+          },
+          {
+            "name": "Прогулки на свежем воздухе",
+            "img": "./images/altinai-int4.png"
+          },
+          {
+            "name": "Волонтерство",
+            "img": "./images/altinai-int5.png"
+          },
+          {
+            "name": "Рукоделие",
+            "img": "./images/altinai-int6.png"
+          }
+        ]
       }
     }
   }
