@@ -75,7 +75,8 @@ const setupEventListeners = () => {
   });
 
   document.addEventListener('click', (e) => {
-    const closeIcon = e.target.closest('.close-icon');
+    const target = e.target;
+    const closeIcon = target.closest('.close-icon');
 
     if (!closeIcon) return;
 
