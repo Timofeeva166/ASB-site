@@ -175,6 +175,25 @@
             "authorRu": "Silasence"
           }
         ]
+      },
+      "maximilian-blog": {
+        "id": "maximilian-blog",
+        "posts": [
+          {
+            "id": 1,
+            "text": "Обновил фотографию на странице",
+            "images": [
+              "./images/maximilian-blog.png"
+            ],
+            "type": "",
+            "tags": [
+              "Фото"
+            ],
+            "date": "09.07.2026",
+            "author": "maximilian-blog",
+            "authorRu": "Макси"
+          }
+        ]
       }
     }
   }

@@ -257,6 +257,61 @@
             "img": "./images/silas-int4.png"
           }
         ]
+      },
+      "maximilian-blog": {
+        "id": "silas",
+        "mainInfo": {
+          "name": "Макси",
+          "sex": "мужской",
+          "position": "Ведущий системный администратор",
+          "birthdate": "14 февраля",
+          "status": "Бывают старые сервера, которые только перегреваются и мешают людям... ＿|￣|○"
+        },
+        "avatar": "./images/maximilian-blog.png",
+        "aboutMe": [
+          "Живу в каморке под лестницей, питаюсь острой лапшой 🍜",
+          "Если у вас что-то сломалось - напишите мне, я починю"
+        ],
+        "friends": [
+          {
+            "id": "elen-blog",
+            "name": "Элен Мур"
+          },
+          {
+            "id": "mailo",
+            "name": "Майло Морец"
+          },
+          {
+            "id": "galina",
+            "name": "Галина Рьяных"
+          },
+          {
+            "id": "villiam-blog",
+            "name": "Виллиам Николз"
+          },
+          {
+            "id": "sis",
+            "name": "Сисадминище"
+          }
+        ],
+        "interests": [
+          {
+            "name": "Покемоны (мультфильмы, игры)",
+            "img": "./images/maximilian-int1.png"
+          },
+          {
+            "name": "Флаттершай (блог)",
+            "img": "./images/maximilian-int2.png"
+          },
+          {
+            "name": "Смешные коты (фотографии)",
+            "img": "./images/maximilian-int3.png"
+          },
+          {
+            "name": "Грустный паблик (блог)",
+            "img": "./images/maximilian-int4.png"
+          }
+        ]
       }
     }
   }
