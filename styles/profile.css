@@ -204,12 +204,14 @@
   flex-direction: column;
   gap: 7px;
   inline-size: clamp(2.25rem, 1.9859rem + 1.1268vw, 3rem);
+  align-items: center;
 }
 
 .friend-name {
-  font-size: 10px;
+  font-size: 9px;
   text-wrap: wrap;
   text-align: center;
+  overflow-wrap: break-word;
 }
 
 .friends__list {
