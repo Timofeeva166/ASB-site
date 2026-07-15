@@ -99,7 +99,9 @@ const createPostText = (data) => {
 
 // создать картинки (с лайтбоксом)
 const createPostImages = (data) => {
-  if (data.images || !data.images.length === 0) {
+  if (data.images.length === 0) {
+    return '';
+  }
 
   const postImagesContainer = document.createElement('div');
   postImagesContainer.classList.add('post-images-container');
@@ -122,11 +124,14 @@ const createPostImages = (data) => {
   });
 
   return postImagesContainer;
-  }
 }
 
 //создать теги
 const createPostTags = (data) => {
+  if (data.tags.length === 0) {
+    return '';
+  }
+
   const postTagsContainer = document.createElement('div');
   postTagsContainer.classList.add('post-tags-container');
 
