@@ -351,16 +351,15 @@
 
 .staff__card {
   display: flex;
-  gap: 30px;
-  border-radius: 20px;
+  flex-direction: column;
+  gap: 15px;
+  border-radius: 5px;
+  padding: 20px;
   background-color: var(--staff-card-color);
   transition: transform 0.4s ease, background-color 0.4s ease,
   box-shadow 0.4s ease;
   cursor: pointer;
   block-size: 100%;
-  overflow: hidden;
-  border-block-end: 2px solid var(--button-color);
-  padding-right: 20px;
 }
 
 .staff__card:hover {
@@ -369,17 +368,14 @@
 }
 
 .card-img {
-  border-top-right-radius: 50%;
-  border-bottom-right-radius: 50%;
+  border-radius: 5px;
   object-fit: cover;
   block-size: 100%;
-  inline-size: 40%;
+  inline-size: 100%;
 }
 
 .card-text {
   text-transform: uppercase;
-  align-self: center;
-  font-size: 14px;
 }
 
 .footer {
@@ -464,7 +460,8 @@
   display: grid;
   grid-template-columns: min-content 1fr;
   grid-template-rows: min-content 1fr;
-  gap: 10px;
+  gap: clamp(1.25rem, 1.0299rem + 0.939vw, 1.875rem);
+  column-gap: 50px;
   border: none;
   border-radius: 20px;
   padding: 20px;
@@ -474,8 +471,6 @@
   max-inline-size: 60%;
   background-color: var(--modal-background-color);
   font-size: clamp(0.8125rem, 0.7465rem + 0.2817vw, 1rem);
-  max-block-size: 70%;
-  border-block-end: 5px solid var(--button-color);
 }
 
 .resume[open] {
@@ -494,11 +489,10 @@ body:has(.resume[open]) {
 .resume__img {
   grid-column: 1;
   grid-row: 1 / 2;
-  border-bottom-right-radius: 50%;
+  border-radius: 5px;
   object-fit: cover;
   block-size: clamp(9.375rem, 7.1743rem + 9.3897vw, 15.625rem);
   aspect-ratio: 1/1;
-  translate: -20px -20px;
 }
 
 .resume__data-container {
@@ -657,7 +651,7 @@ body:has(.resume[open]) {
   }
 
   .resume {
-    block-size: 80dvh;
+    block-size: 97dvh;
     max-inline-size: 90%;
   }
 
