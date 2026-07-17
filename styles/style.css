@@ -374,7 +374,6 @@
   object-fit: cover;
   block-size: 100%;
   inline-size: 40%;
-  box-shadow: 0px 0px 12px var(--accent-color);
 }
 
 .card-text {
@@ -499,7 +498,6 @@ body:has(.resume[open]) {
   object-fit: cover;
   block-size: clamp(9.375rem, 7.1743rem + 9.3897vw, 15.625rem);
   aspect-ratio: 1/1;
-  box-shadow: 0px 0px 20px var(--accent-color);
   translate: -20px -20px;
 }
 
