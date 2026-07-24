@@ -285,7 +285,7 @@
   inline-size: 100%;
   block-size: 380px;
   object-fit: cover;
-  object-position: top left;
+  object-position: center;
   grid-row: 2;
   grid-column: 1;
   border-radius: 20px;
@@ -312,7 +312,7 @@
 
 .anonce .hero__quote {
   text-align: start;
-  font-size: clamp(1rem, 0.846rem + 0.6573vw, 1.4375rem);
+  font-size: clamp(0.9375rem, 0.8715rem + 0.2817vw, 1.125rem);
 }
 
 .ps {
@@ -665,7 +665,7 @@ body:has(.resume[open]) {
   }
 
   .anonce-img {
-    block-size: 250px;
+    block-size: clamp(15.625rem, 10.9303rem + 20.0308vw, 23.75rem);
   }
 }
 
