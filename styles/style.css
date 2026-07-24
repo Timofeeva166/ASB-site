@@ -648,7 +648,7 @@ body:has(.resume[open]) {
 
 .jelly-huge {
   position: absolute;
-  block-size: 60px;
+  block-size: clamp(1.875rem, 1.2148rem + 2.8169vw, 3.75rem);
   aspect-ratio: 1/1;
 }
 
