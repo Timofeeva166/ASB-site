@@ -251,19 +251,18 @@
   background-color: #ac8917;
 }
 
-.dollar {
-  position: absolute;
+.jelly-dollar {
   color: var(--dollar-color);
   font-size: 160px;
 }
 
-.dollar-start {
+.jelly-dollar-start {
   top: 30px;
   left: 20px;
 }
 
-.dollar-end {
-  top: 30px;
+.jelly-dollar-end {
+  bottom: 30px;
   right: 20px;
 }
 
@@ -633,6 +632,44 @@ body:has(.resume[open]) {
   cursor: pointer;
   inline-size: fit-content;
   transition: background-color 0.4s ease;
+}
+
+.jelly-big {
+  position: absolute;
+  block-size: 30px;
+  aspect-ratio: 1/1;
+}
+
+.jelly-medium {
+  position: absolute;
+  block-size: 20px;
+  aspect-ratio: 1/1;
+}
+
+.jelly-huge {
+  position: absolute;
+  block-size: 60px;
+  aspect-ratio: 1/1;
+}
+
+.jelly-posts, .jelly-partners {
+  bottom: 15px;
+  right: 15px;
+}
+
+.jelly-blade {
+  top: 110px;
+  left: 30px;
+}
+
+.jelly-kai {
+  top: -5px;
+  left: 140px;
+}
+
+.jelly-tooltip {
+  bottom: 2px;
+  right: 2px;
 }
 
 @media (width < 1240px) {

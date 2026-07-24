@@ -43,7 +43,7 @@
             "name": "Кайрен Фортин"
           },
           {
-            "id": "yaki",
+            "id": "jelly",
             "name": "Кагаяки Хокаи"
           },
           {
@@ -75,6 +75,10 @@
           {
             "name": "Ночные прогулки (фотографии)",
             "img": "./images/elen-int6.png"
+          },
+          {
+            "name": "Желе ASB ASK",
+            "img": "./images/jelly.png"
           }
         ]
       },
