@@ -148,6 +148,19 @@
             "date": "15.07.2026",
             "author": "elen-blog",
             "authorRu": "Элен Мур"
+          },
+          {
+            "id": 7,
+            "text": "Save a horse ride a cowboy",
+            "images": [
+              "./images/elen-post8.png"
+            ],
+            "type": "",
+            "tags": [
+            ],
+            "date": "05.08.2026",
+            "author": "elen-blog",
+            "authorRu": "Элен Мур"
           }
         ]
       },
@@ -275,6 +288,24 @@
             "date": "15.07.2026",
             "author": "silas-blog",
             "authorRu": "Silasence"
+          }
+        ]
+      },
+      "leona-blog": {
+        "id": "leona-blog",
+        "posts": [
+          {
+            "id": 1,
+            "text": "Мой выпитый кофе рано утром, готова к работе",
+            "images": [
+              "./images/leona-post1.png"
+            ],
+            "type": "",
+            "tags": [
+            ],
+            "date": "05.08.2026",
+            "author": "leona-blog",
+            "authorRu": "Леона Харт"
           }
         ]
       }

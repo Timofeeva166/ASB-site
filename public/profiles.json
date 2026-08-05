@@ -45,10 +45,6 @@
           {
             "id": "jelly",
             "name": "Кагаяки Хокаи"
-          },
-          {
-            "id": "chris",
-            "name": "Кристиан Хопкинс"
           }
         ],
         "interests": [
@@ -314,6 +310,69 @@
           {
             "name": "Грустный паблик (блог)",
             "img": "./images/maximilian-int4.png"
+          }
+        ]
+      },
+      "leona-blog": {
+        "id": "leona",
+        "mainInfo": {
+          "name": "Леона Харт",
+          "sex": "женский",
+          "position": "Методист по разработке обучающих программ",
+          "birthdate": "12 августа",
+          "status": "Моя работа – сделать сложное понятным за один тренинг🤯"
+        },
+        "avatar": "./images/leona-blog.png",
+        "aboutMe": [
+          "Методист. Стабилизирую время в дедлайнах",
+          "Верю, что структура — это тоже магия. 🗂️✨"
+        ],
+        "friends": [
+          {
+            "id": "galina",
+            "name": "Галина Рьяных"
+          },
+          {
+            "id": "altinai-blog",
+            "name": "Алтынай Жанысов"
+          },
+          {
+            "id": "kairen",
+            "name": "Кайрен Фортин"
+          },
+          {
+            "id": "ann",
+            "name": "Энн Кортни"
+          },
+          {
+            "id": "maximilian-blog",
+            "name": "Макси"
+          },
+          {
+            "id": "elen-blog",
+            "name": "Элен Мур"
+          }
+        ],
+        "interests": [
+          {
+            "name": "Мультфильмы",
+            "img": "./images/leona-int1.png"
+          },
+          {
+            "name": "Природа",
+            "img": "./images/leona-int2.png"
+          },
+          {
+            "name": "Музыка",
+            "img": "./images/leona-int3.png"
+          },
+          {
+            "name": "Классическая литература",
+            "img": "./images/leona-int4.png"
+          },
+          {
+            "name": "Птицы",
+            "img": "./images/leona-int5.png"
           }
         ]
       }
